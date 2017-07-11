@@ -1,3 +1,3 @@
 // @flow
-export default (...fns: Array<(x: any) => any>) => (x: any) =>
+export default (...fns: Array<GenericFn>) => (x: any) =>
   fns.reduce((acc, fn) => fn(acc), x);

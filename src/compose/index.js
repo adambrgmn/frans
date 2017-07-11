@@ -1,5 +1,4 @@
 // @flow
 
-type Fn = (x: any) => any;
-export default (...fns: Array<Fn>) => (x: any) =>
-  fns.reduceRight((acc: any, fn: Fn) => fn(acc), x);
+export default (...fns: Array<GenericFn>) => (x: any) =>
+  fns.reduceRight((acc: any, fn: GenericFn) => fn(acc), x);
