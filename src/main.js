@@ -1,3 +1,5 @@
 import _pipe from './pipe';
+import _compose from './compose';
 
-export default _pipe;
+export const pipe = _pipe;
+export const compose = _compose;
