@@ -8,19 +8,20 @@ const commonPlugins = () => [
   babel({ exclude: 'node_modules/**' }),
 ];
 
+const commonSettings = {
+  entry: 'src/main.js',
+  moduleName: 'Frans',
+};
+
 export default [
-  {
-    entry: 'src/main.js',
+  Object.assign({}, commonSettings, {
     dest: 'build/index.js',
-    moduleName: 'Frans',
     format: 'cjs',
     plugins: commonPlugins(),
-  },
-  {
-    entry: 'src/main.js',
+  }),
+  Object.assign({}, commonSettings, {
     dest: 'build/frans.js',
-    moduleName: 'Frans',
     format: 'iife',
     plugins: commonPlugins(),
-  },
+  }),
 ];
