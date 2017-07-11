@@ -10,7 +10,13 @@
   "scripts": {
     "precommit": "lint-staged",
     "prebuild": "rimraf build/",
-    "build": "rollup -c"
+    "build": "NODE_ENV=production rollup -c",
+    "test": "NODE_ENV=test ava"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ]
   },
   "lint-staged": {
     "*.js": [
@@ -20,8 +26,10 @@
     ]
   },
   "devDependencies": {
+    "ava": "^0.20.0",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.24.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-config-prettier": "^2.3.0",
