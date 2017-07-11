@@ -1,4 +1,4 @@
 /* eslint-disable no-undef */
 /* @flow */
 
-declare type GenericFn = (x: any) => any;
+declare type GenericFn = (...x: any) => any;
