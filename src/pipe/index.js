@@ -1,3 +1,5 @@
 // @flow
+import reduce from '../reduce';
+
 export default (...fns: Array<GenericFn>) => (x: any) =>
-  fns.reduce((acc, fn) => fn(acc), x);
+  reduce((acc, fn) => fn(acc), x)(fns);
