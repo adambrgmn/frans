@@ -1,3 +1,4 @@
 // @flow
+import nth from '../nth';
 
-export default (arr: Array<any>) => arr[0];
+export default nth(0);
