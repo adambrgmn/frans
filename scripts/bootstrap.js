@@ -4,6 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const { Transform } = require('stream');
 
+const addToMain = require('./utils/addToMain');
+
 const ROOT_FOLDER = path.resolve(process.cwd(), 'src');
 
 const access = promisify(fs.access);
@@ -102,6 +104,8 @@ async function run(newModuleName) {
       fileName: `${newModuleName}.test.js`,
       moduleName: newModuleName,
     });
+
+    await addToMain(newModuleName);
 
     console.log(`Bootstraped new module '${newModuleName}'`);
   } catch (e) {
