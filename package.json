@@ -11,7 +11,8 @@
     "precommit": "lint-staged",
     "prebuild": "rimraf build/",
     "build": "NODE_ENV=production rollup -c",
-    "test": "NODE_ENV=test ava"
+    "test": "NODE_ENV=test ava",
+    "new-module": "node scripts/bootstrap.js"
   },
   "ava": {
     "require": [
