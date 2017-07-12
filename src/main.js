@@ -1,6 +1,7 @@
 // @flow
 import _compose from './compose';
 import _filter from './filter';
+import _head from './head';
 import _map from './map';
 import _nth from './nth';
 import _pipe from './pipe';
@@ -11,6 +12,7 @@ import _reverse from './reverse';
 
 export const compose = _compose;
 export const filter = _filter;
+export const head = _head;
 export const map = _map;
 export const nth = _nth;
 export const pipe = _pipe;
