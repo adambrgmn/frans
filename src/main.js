@@ -1,5 +1,6 @@
 // @flow
 import _compose from './compose';
+import _curry from './curry';
 import _filter from './filter';
 import _head from './head';
 import _last from './last';
@@ -13,6 +14,7 @@ import _reverse from './reverse';
 import _slice from './slice';
 
 export const compose = _compose;
+export const curry = _curry;
 export const filter = _filter;
 export const head = _head;
 export const last = _last;
