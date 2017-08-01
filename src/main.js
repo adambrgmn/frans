@@ -2,6 +2,7 @@
 import _compose from './compose';
 import _curry from './curry';
 import _filter from './filter';
+import _find from './find';
 import _head from './head';
 import _isArray from './isArray';
 import _last from './last';
@@ -17,6 +18,7 @@ import _slice from './slice';
 export const compose = _compose;
 export const curry = _curry;
 export const filter = _filter;
+export const find = _find;
 export const head = _head;
 export const isArray = _isArray;
 export const last = _last;
