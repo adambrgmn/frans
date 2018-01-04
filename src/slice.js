@@ -1,4 +1,4 @@
-import nth from '../nth';
+import nth from './nth';
 
 export default (s, e) => arr => {
   const newArr = [];

@@ -1,5 +1,5 @@
-import findIndex from '../findIndex';
-import nth from '../nth';
+import findIndex from './findIndex';
+import nth from './nth';
 
 export default predicateFn => arr => {
   const idx = findIndex(predicateFn)(arr);
