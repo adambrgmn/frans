@@ -8,46 +8,23 @@
   "author": "Adam Bergman <adam@fransvilhelm.com>",
   "license": "MIT",
   "scripts": {
-    "precommit": "lint-staged",
-    "prebuild": "rimraf build/",
-    "build": "NODE_ENV=production rollup -c",
-    "test": "NODE_ENV=test ava",
+    "build": "frans-scripts bundle",
+    "test": "frans-scripts test",
+    "lint": "frans-scripts lint",
+    "format": "frans-scripts format",
+    "precommit": "frans-scripts precommit",
+    "validate": "yarn run lint && yarn run test --coverage && yarn run build",
+    "release": "frans-scripts release",
     "new-module": "node scripts/bootstrap.js"
   },
-  "ava": {
-    "require": [
-      "babel-register"
-    ]
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "prettier --single-quote --trailing-comma all --write",
-      "git add"
-    ]
-  },
   "devDependencies": {
-    "ava": "^0.21.0",
-    "babel-eslint": "^7.2.3",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-flow": "^6.23.0",
-    "babel-register": "^6.24.1",
-    "eslint": "^4.3.0",
-    "eslint-config-airbnb-base": "^11.3.1",
-    "eslint-config-prettier": "^2.3.0",
-    "eslint-plugin-flowtype": "^2.35.0",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-prettier": "^2.1.2",
-    "flow-bin": "^0.51.1",
-    "husky": "^0.14.3",
-    "lint-staged": "^4.0.2",
-    "prettier": "^1.5.3",
-    "rimraf": "^2.6.1",
-    "rollup": "^0.45.2",
-    "rollup-plugin-babel": "^2.7.1",
-    "rollup-plugin-commonjs": "^8.0.2",
-    "rollup-plugin-node-resolve": "^3.0.0"
+    "cz-conventional-changelog": "^2.1.0",
+    "frans-scripts": "^2.0.2"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
