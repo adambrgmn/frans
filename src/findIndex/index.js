@@ -1,6 +1,4 @@
-// @flow
-
-export default (predicateFn: (x: any) => boolean) => (arr: Array<any>) => {
+export default predicateFn => arr => {
   let i = 0;
   const len = arr.length;
 
