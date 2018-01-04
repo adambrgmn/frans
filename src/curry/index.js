@@ -1,9 +1,7 @@
-// @flow
-
-export default (fn: (...a: Array<any>) => any) => {
+export default fn => {
   const totalArgs = fn.length;
 
-  const curried = (...partialArgs: Array<any>) => (...args: Array<any>) => {
+  const curried = (...partialArgs) => (...args) => {
     if (partialArgs.length + args.length >= totalArgs)
       return fn(...partialArgs, ...args);
 

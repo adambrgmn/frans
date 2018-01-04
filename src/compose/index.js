@@ -1,5 +1,3 @@
-// @flow
 import reduceRight from '../reduceRight';
 
-export default (...fns: Array<GenericFn>) => (x: any) =>
-  reduceRight((acc: any, fn: GenericFn) => fn(acc), x)(fns);
+export default (...fns) => x => reduceRight((acc, fn) => fn(acc), x)(fns);

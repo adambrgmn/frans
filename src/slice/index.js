@@ -1,7 +1,6 @@
-// @flow
 import nth from '../nth';
 
-export default (s: number, e?: number) => (arr: Array<any>): Array<any> => {
+export default (s, e) => arr => {
   const newArr = [];
   const start = s < 0 ? arr.length + s : s;
   const end = e && e < 0 ? arr.length + e : e || arr.length;
