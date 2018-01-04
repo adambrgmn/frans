@@ -1,13 +1,11 @@
-import test from 'ava';
 import isArray from '../isArray';
 
-test('Core.isArray', t => {
-  const should = 'Should deterimine if an instance is array or not';
-
-  t.truthy(isArray([]), should);
-  t.truthy(isArray([1, 2, 3]), should);
-  t.falsy(isArray({ foo: 'bar' }), should);
-  t.falsy(isArray('baz'), should);
-  t.falsy(isArray(null), should);
-  t.falsy(isArray(undefined), should);
+test('Core.isArray', () => {
+  expect(isArray([])).toBeTruthy();
+  expect(isArray([1, 2, 3])).toBeTruthy();
+  expect(isArray({ foo: 'bar' })).toBeFalsy();
+  expect(isArray(() => [1, 2, 3])).toBeFalsy();
+  expect(isArray('baz')).toBeFalsy();
+  expect(isArray(null)).toBeFalsy();
+  expect(isArray(undefined)).toBeFalsy();
 });

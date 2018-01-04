@@ -1,4 +1,3 @@
-import test from 'ava';
 import compose from '../compose';
 
 const capitalize = x => `${x[0].toUpperCase()}${x.substring(1)}`;
@@ -9,29 +8,24 @@ const reverse = x => {
   return ret;
 };
 
-test('Core.compose', t => {
+test('Core.compose', () => {
   {
-    const should =
-      'Should compose any number of functions and return a function';
     const actual = typeof compose(reverse, capitalize);
     const expected = 'function';
-
-    t.is(actual, expected, should);
+    expect(actual).toBe(expected);
   }
 
   {
-    const should = 'Should compose any number of functions';
     const actual = compose(reverse, capitalize)('hello');
     const expected = 'olleH';
 
-    t.is(actual, expected, should);
+    expect(actual).toBe(expected);
   }
 
   {
-    const should = 'Should be composeable';
     const actual = compose(capitalize, compose(reverse, capitalize))('hello');
     const expected = 'OlleH';
 
-    t.is(actual, expected, should);
+    expect(actual).toBe(expected);
   }
 });
