@@ -1,34 +1,35 @@
-// @flow
-import _compose from './compose';
-import _curry from './curry';
-import _filter from './filter';
-import _find from './find';
-import _findIndex from './findIndex';
-import _head from './head';
-import _isArray from './isArray';
-import _last from './last';
-import _map from './map';
-import _nth from './nth';
-import _pipe from './pipe';
-import _prop from './prop';
-import _reduce from './reduce';
-import _reduceRight from './reduceRight';
-import _reverse from './reverse';
-import _slice from './slice';
+import compose from './compose';
+import curry from './curry';
+import filter from './filter';
+import find from './find';
+import findIndex from './findIndex';
+import head from './head';
+import isArray from './isArray';
+import last from './last';
+import map from './map';
+import nth from './nth';
+import pipe from './pipe';
+import prop from './prop';
+import reduce from './reduce';
+import reduceRight from './reduceRight';
+import reverse from './reverse';
+import slice from './slice';
 
-export const compose = _compose;
-export const curry = _curry;
-export const filter = _filter;
-export const find = _find;
-export const findIndex = _findIndex;
-export const head = _head;
-export const isArray = _isArray;
-export const last = _last;
-export const map = _map;
-export const nth = _nth;
-export const pipe = _pipe;
-export const prop = _prop;
-export const reduce = _reduce;
-export const reduceRight = _reduceRight;
-export const reverse = _reverse;
-export const slice = _slice;
+export {
+  compose,
+  curry,
+  filter,
+  find,
+  findIndex,
+  head,
+  isArray,
+  last,
+  map,
+  nth,
+  pipe,
+  prop,
+  reduce,
+  reduceRight,
+  reverse,
+  slice,
+};
