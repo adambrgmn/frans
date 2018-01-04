@@ -14,8 +14,7 @@
     "format": "frans-scripts format",
     "precommit": "frans-scripts precommit",
     "validate": "yarn run lint && yarn run test --coverage && yarn run build",
-    "release": "frans-scripts release",
-    "new-module": "node scripts/bootstrap.js"
+    "release": "frans-scripts release"
   },
   "devDependencies": {
     "cz-conventional-changelog": "^2.1.0",
