@@ -1,4 +1,5 @@
 import compose from './compose';
+import concat from './concat';
 import curry from './curry';
 import filter from './filter';
 import find from './find';
@@ -17,6 +18,7 @@ import slice from './slice';
 
 export {
   compose,
+  concat,
   curry,
   filter,
   find,
