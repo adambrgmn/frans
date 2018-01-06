@@ -1,3 +1,5 @@
+import allPass from './allPass';
+import anyPass from './anyPass';
 import compose from './compose';
 import concat from './concat';
 import curry from './curry';
@@ -17,6 +19,8 @@ import reverse from './reverse';
 import slice from './slice';
 
 export {
+  allPass,
+  anyPass,
   compose,
   concat,
   curry,
