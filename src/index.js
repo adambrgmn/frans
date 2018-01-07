@@ -14,6 +14,7 @@ import isFunction from './isFunction';
 import isNil from './isNil';
 import isNumber from './isNumber';
 import isObject from './isObject';
+import isString from './isString';
 import last from './last';
 import map from './map';
 import nth from './nth';
@@ -41,6 +42,7 @@ export {
   isNil,
   isNumber,
   isObject,
+  isString,
   last,
   map,
   nth,
