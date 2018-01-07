@@ -1,1 +1,1 @@
-export default prop => obj => obj[prop];
+export default (prop, obj) => obj[prop];

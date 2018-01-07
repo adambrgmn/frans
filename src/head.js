@@ -1,3 +1,3 @@
 import nth from './nth';
 
-export default nth(0);
+export default arr => nth(0, arr);

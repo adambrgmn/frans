@@ -1,4 +1,4 @@
-export default predicateFn => arr => {
+export default (predicateFn, arr) => {
   let i = 0;
   const len = arr.length;
 
