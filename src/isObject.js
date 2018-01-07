@@ -1,3 +1,4 @@
+import is from './is';
 import isArray from './isArray';
 
-export default x => typeof x === 'object' && !isArray(x) && x !== null;
+export default x => is('object', x) && !isArray(x) && x !== null;

@@ -8,6 +8,7 @@ import filter from './filter';
 import find from './find';
 import findIndex from './findIndex';
 import head from './head';
+import is from './is';
 import isArray from './isArray';
 import isObject from './isObject';
 import last from './last';
@@ -31,6 +32,7 @@ export {
   find,
   findIndex,
   head,
+  is,
   isArray,
   isObject,
   last,
