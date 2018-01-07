@@ -11,6 +11,7 @@ import head from './head';
 import is from './is';
 import isArray from './isArray';
 import isFunction from './isFunction';
+import isNil from './isNil';
 import isObject from './isObject';
 import last from './last';
 import map from './map';
@@ -36,6 +37,7 @@ export {
   is,
   isArray,
   isFunction,
+  isNil,
   isObject,
   last,
   map,
