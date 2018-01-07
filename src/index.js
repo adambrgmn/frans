@@ -9,6 +9,7 @@ import find from './find';
 import findIndex from './findIndex';
 import head from './head';
 import isArray from './isArray';
+import isObject from './isObject';
 import last from './last';
 import map from './map';
 import nth from './nth';
@@ -31,6 +32,7 @@ export {
   findIndex,
   head,
   isArray,
+  isObject,
   last,
   map,
   nth,
