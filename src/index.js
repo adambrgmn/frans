@@ -12,6 +12,7 @@ import is from './is';
 import isArray from './isArray';
 import isFunction from './isFunction';
 import isNil from './isNil';
+import isNumber from './isNumber';
 import isObject from './isObject';
 import last from './last';
 import map from './map';
@@ -38,6 +39,7 @@ export {
   isArray,
   isFunction,
   isNil,
+  isNumber,
   isObject,
   last,
   map,
