@@ -34,6 +34,7 @@ import reduce from './reduce';
 import reduceRight from './reduceRight';
 import reverse from './reverse';
 import slice from './slice';
+import T from './T';
 
 export {
   adjust,
@@ -72,4 +73,5 @@ export {
   reduceRight,
   reverse,
   slice,
+  T,
 };
