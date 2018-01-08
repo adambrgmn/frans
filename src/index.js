@@ -7,6 +7,7 @@ import curry from './curry';
 import filter from './filter';
 import find from './find';
 import findIndex from './findIndex';
+import has from './has';
 import head from './head';
 import is from './is';
 import isArray from './isArray';
@@ -37,6 +38,7 @@ export {
   filter,
   find,
   findIndex,
+  has,
   head,
   is,
   isArray,
