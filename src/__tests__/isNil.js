@@ -1,4 +1,4 @@
-import isNil from '../isNil';
+import { isNil } from '../';
 
 test('Core.isNil', () => {
   expect(isNil(null)).toBeTruthy();

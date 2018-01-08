@@ -1,4 +1,5 @@
-import isArray, { _isArray } from '../isArray';
+import { isArray } from '../';
+import { _isArray } from '../isArray';
 
 test('Core.isArray', () => {
   expect(isArray([])).toBeTruthy();

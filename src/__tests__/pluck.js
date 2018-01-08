@@ -1,4 +1,4 @@
-import pluck from '../pluck';
+import { pluck } from '../';
 
 test('Core.pluck', () => {
   expect(pluck('a', [{ a: 1 }, { a: 2 }, { b: 3 }])).toEqual([1, 2, undefined]);

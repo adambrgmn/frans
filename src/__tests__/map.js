@@ -1,4 +1,4 @@
-import map from '../map';
+import { map } from '../';
 
 test('Core.map', () => {
   const square = n => n ** 2;

@@ -1,4 +1,4 @@
-import always from '../always';
+import { always } from '../';
 
 test('Core.always', () => {
   const list = [1, 2, 3];

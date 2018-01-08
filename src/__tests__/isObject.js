@@ -1,4 +1,4 @@
-import isObject from '../isObject';
+import { isObject } from '../';
 
 test('Core.isObject', () => {
   expect(isObject({})).toBeTruthy();

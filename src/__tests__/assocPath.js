@@ -1,4 +1,4 @@
-import assocPath from '../assocPath';
+import { assocPath } from '../';
 
 test('Core.assocPath', () => {
   const origin = { a: 1, b: { c: 1 } };

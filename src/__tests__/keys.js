@@ -1,4 +1,5 @@
-import keys, { _keys } from '../keys';
+import { keys } from '../';
+import { _keys } from '../keys';
 
 test('Core.keys', () => {
   expect(keys({ a: 1, b: 2 })).toEqual(['a', 'b']);

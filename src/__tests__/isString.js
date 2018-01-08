@@ -1,4 +1,4 @@
-import isString from '../isString';
+import { isString } from '../';
 
 test('Core.isString', () => {
   expect(isString('a')).toBeTruthy();

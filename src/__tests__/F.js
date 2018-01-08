@@ -1,4 +1,4 @@
-import F from '../F';
+import { F } from '../';
 
 test('Core.T', () => {
   expect(typeof F).toBe('function');
