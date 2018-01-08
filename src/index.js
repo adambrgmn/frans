@@ -28,6 +28,7 @@ import length from './length';
 import map from './map';
 import nth from './nth';
 import pipe from './pipe';
+import pluck from './pluck';
 import prepend from './prepend';
 import prop from './prop';
 import reduce from './reduce';
@@ -67,6 +68,7 @@ export {
   length,
   map,
   nth,
+  pluck,
   pipe,
   prepend,
   prop,
