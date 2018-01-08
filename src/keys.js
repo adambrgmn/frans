@@ -4,7 +4,7 @@ import has from './has';
 import length from './length';
 import nth from './nth';
 
-export const _keys = obj => {
+export const _keys = (function _keys() {
   const hasDontEnumBug = !Object.prototype.propertyIsEnumerable.call(
     { toString: null },
     'toString',
@@ -22,24 +22,24 @@ export const _keys = obj => {
 
   const dontEnumsLength = length(dontEnums);
 
-  if (!isObject(obj)) throw new TypeError('Keys called on non-object');
+  return obj => {
+    if (!isObject(obj)) throw new TypeError('Keys called on non-object');
 
-  const result = [];
+    const result = [];
 
-  for (const prop in obj) {
-    if (has(prop, obj)) result.push(prop);
-  }
+    for (const prop in obj) {
+      if (has(prop, obj)) result.push(prop);
+    }
 
-  if (hasDontEnumBug) {
-    for (let i = 0; i < dontEnumsLength; i++) {
-      const prop = nth(i, dontEnums);
-      if (has(prop, obj)) {
-        result.push(prop);
+    if (hasDontEnumBug) {
+      for (let i = 0; i < dontEnumsLength; i++) {
+        const prop = nth(i, dontEnums);
+        if (has(prop, obj)) result.push(prop);
       }
     }
-  }
 
-  return result;
-};
+    return result;
+  };
+})();
 
 export default Object.keys || _keys;
