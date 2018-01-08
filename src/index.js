@@ -1,3 +1,4 @@
+import adjust from './adjust';
 import allPass from './allPass';
 import anyPass from './anyPass';
 import append from './append';
@@ -33,6 +34,7 @@ import reverse from './reverse';
 import slice from './slice';
 
 export {
+  adjust,
   allPass,
   anyPass,
   append,
