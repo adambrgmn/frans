@@ -8,6 +8,7 @@ import assocPath from './assocPath';
 import compose from './compose';
 import concat from './concat';
 import curry from './curry';
+import F from './F';
 import filter from './filter';
 import find from './find';
 import findIndex from './findIndex';
@@ -45,6 +46,7 @@ export {
   compose,
   concat,
   curry,
+  F,
   filter,
   find,
   findIndex,
