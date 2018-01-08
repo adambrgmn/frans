@@ -23,6 +23,7 @@ import isNumber from './isNumber';
 import isObject from './isObject';
 import isString from './isString';
 import join from './join';
+import keys from './keys';
 import last from './last';
 import length from './length';
 import map from './map';
@@ -64,6 +65,7 @@ export {
   isObject,
   isString,
   join,
+  keys,
   last,
   length,
   map,
