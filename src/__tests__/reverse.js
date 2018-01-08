@@ -1,4 +1,4 @@
-import reverse from '../reverse';
+import { reverse } from '../';
 
 test('Core.reverse', () => {
   {

@@ -1,4 +1,4 @@
-import curry from '../curry';
+import { curry } from '../';
 
 test('Core.curry', () => {
   const add = curry((a, b) => a + b);

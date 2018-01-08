@@ -1,4 +1,4 @@
-import concat from '../concat';
+import { concat } from '../';
 
 test('Core.concat', () => {
   {

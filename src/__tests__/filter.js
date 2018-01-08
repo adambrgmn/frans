@@ -1,4 +1,4 @@
-import filter from '../filter';
+import { filter } from '../';
 
 test('Core.filter', () => {
   const actual = filter(el => el.includes('oo'), ['foo', 'fool', 'far']);

@@ -1,4 +1,4 @@
-import prop from '../prop';
+import { prop } from '../';
 
 test('Core.prop', () => {
   {

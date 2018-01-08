@@ -1,4 +1,4 @@
-import has from '../has';
+import { has } from '../';
 
 test('Core.has', () => {
   expect(has('foo', { foo: 1 })).toBeTruthy();

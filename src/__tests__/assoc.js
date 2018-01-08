@@ -1,4 +1,4 @@
-import assoc from '../assoc';
+import { assoc } from '../';
 
 test('Core.assoc', () => {
   expect(assoc('foo', 'bar', {})).toEqual({ foo: 'bar' });

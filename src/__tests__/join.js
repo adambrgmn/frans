@@ -1,4 +1,4 @@
-import join from '../join';
+import { join } from '../';
 
 test('Core.join', () => {
   expect(join(['a', 'b', 'c'], '')).toBe('abc');

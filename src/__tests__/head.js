@@ -1,4 +1,4 @@
-import head from '../head';
+import { head } from '../';
 
 test('Core.head', () => {
   {

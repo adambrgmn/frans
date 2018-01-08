@@ -1,4 +1,4 @@
-import reduce from '../reduce';
+import { reduce } from '../';
 
 test('Core.reduce', () => {
   {

@@ -1,4 +1,4 @@
-import reduceRight from '../reduceRight';
+import { reduceRight } from '../';
 
 test('Core.reduceRight', () => {
   {

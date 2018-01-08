@@ -1,4 +1,4 @@
-import length from '../length';
+import { length } from '../';
 
 test('Core.length', () => {
   expect(length([])).toBe(0);

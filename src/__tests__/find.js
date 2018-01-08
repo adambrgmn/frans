@@ -1,4 +1,4 @@
-import find from '../find';
+import { find } from '../';
 
 test('Core.find', () => {
   {

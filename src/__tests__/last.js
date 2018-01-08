@@ -1,4 +1,4 @@
-import last from '../last';
+import { last } from '../';
 
 test('Core.last', () => {
   {

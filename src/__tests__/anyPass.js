@@ -1,4 +1,4 @@
-import anyPass from '../anyPass';
+import { anyPass } from '../';
 
 test('Core.anyPass', () => {
   expect(anyPass([() => true, () => true], 'foo')).toBeTruthy();

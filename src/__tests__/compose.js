@@ -1,4 +1,4 @@
-import compose from '../compose';
+import { compose } from '../';
 
 const capitalize = x => `${x[0].toUpperCase()}${x.substring(1)}`;
 const reverse = x => {
