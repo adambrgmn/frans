@@ -1,8 +1,10 @@
+import length from './length';
+
 export default fn => {
-  const totalArgs = fn.length;
+  const totalArgs = length(fn);
 
   const curried = (...partialArgs) => (...args) => {
-    if (partialArgs.length + args.length >= totalArgs)
+    if (length(partialArgs) + length(args) >= totalArgs)
       return fn(...partialArgs, ...args);
 
     return curried(...partialArgs, ...args);
