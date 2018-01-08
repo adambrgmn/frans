@@ -17,6 +17,7 @@ import isObject from './isObject';
 import isString from './isString';
 import join from './join';
 import last from './last';
+import length from './length';
 import map from './map';
 import nth from './nth';
 import pipe from './pipe';
@@ -46,6 +47,7 @@ export {
   isString,
   join,
   last,
+  length,
   map,
   nth,
   pipe,

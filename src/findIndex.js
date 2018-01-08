@@ -1,6 +1,8 @@
+import length from './length';
+
 export default (predicateFn, arr) => {
   let i = 0;
-  const len = arr.length;
+  const len = length(arr);
 
   while (i < len) {
     const val = arr[i];
