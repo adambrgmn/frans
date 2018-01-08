@@ -1,5 +1,6 @@
 import adjust from './adjust';
 import allPass from './allPass';
+import always from './always';
 import anyPass from './anyPass';
 import append from './append';
 import assoc from './assoc';
@@ -36,6 +37,7 @@ import slice from './slice';
 export {
   adjust,
   allPass,
+  always,
   anyPass,
   append,
   assoc,
