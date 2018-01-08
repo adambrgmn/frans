@@ -1,6 +1,7 @@
 import allPass from './allPass';
 import anyPass from './anyPass';
 import append from './append';
+import assoc from './assoc';
 import compose from './compose';
 import concat from './concat';
 import curry from './curry';
@@ -32,6 +33,7 @@ export {
   allPass,
   anyPass,
   append,
+  assoc,
   compose,
   concat,
   curry,
