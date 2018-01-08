@@ -11,6 +11,7 @@ import find from './find';
 import findIndex from './findIndex';
 import has from './has';
 import head from './head';
+import insert from './insert';
 import is from './is';
 import isArray from './isArray';
 import isFunction from './isFunction';
@@ -44,6 +45,7 @@ export {
   findIndex,
   has,
   head,
+  insert,
   is,
   isArray,
   isFunction,
