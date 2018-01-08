@@ -1,3 +1,17 @@
 import reduce from './reduce';
+import isObject from './isObject';
+import assoc from './assoc';
+import append from './append';
+import prop from './prop';
 
-export default (fn, arr) => reduce((acc, curr) => [...acc, fn(curr)], [], arr);
+export default (fn, arr) => {
+  if (isObject(arr)) {
+    return reduce(
+      (acc, key) => assoc(key, fn(prop(key, arr)), acc),
+      {},
+      Object.keys(arr),
+    );
+  }
+
+  return reduce((acc, curr) => append(fn(curr), acc), [], arr);
+};

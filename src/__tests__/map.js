@@ -1,8 +1,13 @@
 import map from '../map';
 
 test('Core.map', () => {
-  const actual = map(n => n ** 2, [1, 2, 3, 4]);
-  const expected = [1, 4, 9, 16];
+  const square = n => n ** 2;
+  const list = [1, 2, 3, 4];
+  const obj = { a: 1, b: 2, c: 3, d: 4 };
 
-  expect(actual).toEqual(expected);
+  expect(map(square, list)).toEqual([1, 4, 9, 16]);
+  expect(map(square, list)).not.toBe(list);
+
+  expect(map(square, obj)).toEqual({ a: 1, b: 4, c: 9, d: 16 });
+  expect(map(square, obj)).not.toBe(obj);
 });
