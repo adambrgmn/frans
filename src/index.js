@@ -38,6 +38,7 @@ import reverse from './reverse';
 import slice from './slice';
 import T from './T';
 import update from './update';
+import values from './values';
 
 export {
   adjust,
@@ -80,4 +81,5 @@ export {
   slice,
   T,
   update,
+  values,
 };
