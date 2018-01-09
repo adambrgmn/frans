@@ -1,3 +1,4 @@
+import add from './add';
 import adjust from './adjust';
 import allPass from './allPass';
 import always from './always';
@@ -41,6 +42,7 @@ import update from './update';
 import values from './values';
 
 export {
+  add,
   adjust,
   allPass,
   always,
