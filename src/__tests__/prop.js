@@ -1,24 +1,9 @@
 import { prop } from '../';
 
-test('Core.prop', () => {
-  {
-    const actual = prop('foo', { foo: 'bar' });
-    const expected = 'bar';
-
-    expect(actual).toBe(expected);
-  }
-
-  {
-    const actual = prop('foo', { bar: 'foo' });
-    const expected = undefined;
-
-    expect(actual).toBe(expected);
-  }
-
-  {
-    const actual = prop(2, ['a', 'b', 'c']);
-    const expected = 'c';
-
-    expect(actual).toBe(expected);
-  }
+describe('Core.prop', () => {
+  test('fetches the appropriate prop from an object', () => {
+    expect(prop('foo', { foo: 'bar' })).toBe('bar');
+    expect(prop('foo', { bar: 'foo' })).toBe(undefined);
+    expect(prop(2, ['a', 'b', 'c'])).toBe('c');
+  });
 });

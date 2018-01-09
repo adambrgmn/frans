@@ -1,17 +1,16 @@
 import { reduce } from '../';
 
-test('Core.reduce', () => {
-  {
-    const actual = reduce((acc, v) => acc + v, 0, [1, 2, 3, 4]);
-    const expected = 1 + 2 + 3 + 4;
+describe('Core.reduce', () => {
+  const add = (x, y) => x + y;
+  const mult = (x, y) => x * y;
 
-    expect(actual).toBe(expected);
-  }
+  test('folds simple fns over arrays with the supplied accumulator', () => {
+    expect(reduce(add, 0, [1, 2, 3, 4])).toBe(10);
+    expect(reduce(mult, 1, [1, 2, 3, 4])).toBe(24);
+  });
 
-  {
-    const actual = reduce((acc, v) => acc.concat(v), [], [1, 2, 3, 4]);
-    const expected = [1, 2, 3, 4];
-
-    expect(actual).toEqual(expected);
-  }
+  test('returns the accumulator for an empty array', () => {
+    expect(reduce(add, 0, [])).toBe(0);
+    expect(reduce(mult, 1, [])).toBe(1);
+  });
 });

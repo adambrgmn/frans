@@ -4,10 +4,10 @@ export default (predicateList, ...el) => {
   let ret = true;
 
   while (ret) {
+    if (i >= length) break;
+
     ret = predicateList[i](...el);
     i += 1;
-
-    if (i >= length) break;
   }
 
   return ret;
