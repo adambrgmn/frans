@@ -1,17 +1,22 @@
 import { last } from '../';
 
-test('Core.last', () => {
-  {
-    const actual = last([1, 2, 3, 4]);
-    const expected = 4;
+describe('Core.last', () => {
+  test('returns the first element of an array', () => {
+    expect(last([1, 2, 3])).toBe(3);
+    expect(last([2, 3])).toBe(3);
+    expect(last([3])).toBe(3);
+    expect(last([])).toBe(undefined);
+  });
 
-    expect(actual).toBe(expected);
-  }
+  test('returns the first element of a string', () => {
+    expect(last('abc')).toBe('c');
+    expect(last('bc')).toBe('c');
+    expect(last('c')).toBe('c');
+    expect(last('')).toBe('');
+  });
 
-  {
-    const actual = last('abcd');
-    const expected = 'd';
-
-    expect(actual).toBe(expected);
-  }
+  test('throws if applied to null or undefined', () => {
+    expect(() => last(null)).toThrow(TypeError);
+    expect(() => last(undefined)).toThrow(TypeError);
+  });
 });

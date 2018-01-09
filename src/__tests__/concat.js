@@ -1,19 +1,28 @@
 import { concat } from '../';
 
-test('Core.concat', () => {
-  {
-    const actual = concat([1, 2, 3], [4, 5, 6]);
-    const expected = [1, 2, 3, 4, 5, 6];
+describe('Core.concat', () => {
+  test('adds combines the elements of the two lists', () => {
+    expect(concat(['a', 'b'], ['c', 'd'])).toEqual(['a', 'b', 'c', 'd']);
+    expect(concat([], ['c', 'd'])).toEqual(['c', 'd']);
+  });
 
-    expect(actual).toEqual(expected);
-  }
+  test('adds combines the elements of the two lists', () => {
+    expect(concat(['a', 'b'], ['c', 'd'])).toEqual(['a', 'b', 'c', 'd']);
+    expect(concat([], ['c', 'd'])).toEqual(['c', 'd']);
+  });
 
-  {
-    const actual = concat('abc', 'def');
-    const expected = 'abcdef';
+  test('works on strings', () => {
+    expect(concat('foo', 'bar')).toBe('foobar');
+    expect(concat('x', '')).toBe('x');
+    expect(concat('', 'x')).toBe('x');
+    expect(concat('', '')).toBe('');
+  });
 
-    expect(actual).toBe(expected);
-  }
+  test('throws if attempting to combine an array with a non-array', () => {
+    expect(() => concat([1], 2)).toThrow(TypeError);
+  });
 
-  expect(() => concat([1, 2, 3], 'abc')).toThrow(TypeError);
+  test('throws if not an array or String', () => {
+    expect(() => concat({}, {})).toThrow(TypeError);
+  });
 });

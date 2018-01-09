@@ -1,61 +1,39 @@
 import { curry } from '../';
 
-test('Core.curry', () => {
+describe('Core.curry', () => {
   const add = curry((a, b) => a + b);
   const add5 = add(5);
 
-  {
-    const actual = typeof add;
-    const expected = 'function';
+  test('returns a function', () => {
+    expect(typeof add).toBe('function');
+    expect(typeof add5).toBe('function');
+  });
 
-    expect(actual).toBe(expected);
-  }
+  test('executes function when all args are passed', () => {
+    expect(add(5)(5)).toBe(10);
+    expect(add(5, 5)).toBe(10);
+    expect(add5(5)).toBe(10);
+  });
 
-  {
-    const actual = typeof add5;
-    const expected = 'function';
+  test('', () => {
+    expect(add5(1)).toBe(6);
+  });
 
-    expect(actual).toBe(expected);
-  }
-
-  {
-    const actual = add5(5);
-    const expected = 10;
-
-    expect(actual).toBe(expected);
-  }
-
-  {
-    const actual = add5(1);
-    const expected = 6;
-
-    expect(actual).toBe(expected);
-  }
-
-  {
+  test('accepts any amount of arguments', () => {
     const multiArg = curry((a, b, c, d) => a + b + c + d);
 
-    const actual = multiArg(1)(2)(3, 4);
-    const expected = 10;
+    expect(multiArg(1, 2, 3, 4)).toBe(10);
+    expect(multiArg(1, 2, 3)(4)).toBe(10);
+    expect(multiArg(1, 2)(3, 4)).toBe(10);
+    expect(multiArg(1)(2, 3, 4)).toBe(10);
+    expect(multiArg(1)(2)(3)(4)).toBe(10);
+  });
 
-    expect(actual).toBe(expected);
-  }
-
-  {
-    const reduce = curry((fn, init, arr) => {
-      let l = init;
-      for (let i = 0; i < arr.length; i += 1) l = fn(l, arr[i]);
-      return l;
+  test('passes any extra arguments into the function', () => {
+    const mock = curry(function curried() {
+      return Array.prototype.slice.call(arguments); // eslint-disable-line prefer-rest-params
     });
 
-    const actual = [
-      reduce((a, v) => a + v)(0)([1, 2, 3, 4]),
-      reduce((a, v) => a + v, 1)([1, 2, 3, 4]),
-      reduce((a, v) => a + v)(2, [1, 2, 3, 4]),
-      reduce((a, v) => a + v, 3, [1, 2, 3, 4]),
-    ];
-    const expected = [10, 11, 12, 13];
-
-    expect(actual).toEqual(expected);
-  }
+    expect(mock(1, 2, 3, 4)).toEqual([1, 2, 3, 4]);
+  });
 });

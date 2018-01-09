@@ -1,17 +1,22 @@
 import { head } from '../';
 
-test('Core.head', () => {
-  {
-    const actual = head([1, 2, 3, 4]);
-    const expected = 1;
+describe('Core.head', () => {
+  test('returns the first element of an array', () => {
+    expect(head([1, 2, 3])).toBe(1);
+    expect(head([2, 3])).toBe(2);
+    expect(head([3])).toBe(3);
+    expect(head([])).toBe(undefined);
+  });
 
-    expect(actual).toBe(expected);
-  }
+  test('returns the first element of a string', () => {
+    expect(head('abc')).toBe('a');
+    expect(head('bc')).toBe('b');
+    expect(head('c')).toBe('c');
+    expect(head('')).toBe('');
+  });
 
-  {
-    const actual = head('abcd');
-    const expected = 'a';
-
-    expect(actual).toBe(expected);
-  }
+  test('throws if applied to null or undefined', () => {
+    expect(() => head(null)).toThrow(TypeError);
+    expect(() => head(undefined)).toThrow(TypeError);
+  });
 });

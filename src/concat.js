@@ -8,7 +8,7 @@ export default (a, b) => {
   }
 
   if (isString(a) && isString(b)) {
-    return join([...a, ...b], '');
+    return join('', [...a, ...b]);
   }
 
   throw new TypeError('Both arguments must be of same type');

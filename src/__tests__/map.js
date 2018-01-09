@@ -1,13 +1,21 @@
 import { map } from '../';
 
-test('Core.map', () => {
-  const square = n => n ** 2;
-  const list = [1, 2, 3, 4];
-  const obj = { a: 1, b: 2, c: 3, d: 4 };
+describe('Core.map', () => {
+  const times2 = x => x * 2;
+  const dec = x => x - 1;
 
-  expect(map(square, list)).toEqual([1, 4, 9, 16]);
-  expect(map(square, list)).not.toBe(list);
+  test('maps simple functions over arrays', () => {
+    expect(map(times2, [1, 2, 3, 4])).toEqual([2, 4, 6, 8]);
+  });
 
-  expect(map(square, obj)).toEqual({ a: 1, b: 4, c: 9, d: 16 });
-  expect(map(square, obj)).not.toBe(obj);
+  test('maps over objects', () => {
+    expect(map(dec, {})).toEqual({});
+    expect(map(dec, { x: 4, y: 5, z: 6 })).toEqual({ x: 3, y: 4, z: 5 });
+  });
+
+  test('composes', () => {
+    const mdouble = x => map(times2, x);
+    const mdec = x => map(dec, x);
+    expect(mdec(mdouble([10, 20, 30]))).toEqual([19, 39, 59]);
+  });
 });

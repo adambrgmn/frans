@@ -1,7 +1,14 @@
 import length from './length';
 
 export default (fn, init, arr) => {
-  let l = init;
-  for (let i = 0; i < length(arr); i++) l = fn(l, arr[i]);
-  return l;
+  let idx = 0;
+  let accumulator = init;
+  const len = length(arr);
+
+  while (idx < len) {
+    accumulator = fn(accumulator, arr[idx]);
+    idx += 1;
+  }
+
+  return accumulator;
 };

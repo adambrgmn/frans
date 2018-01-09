@@ -1,13 +1,16 @@
+import slice from './slice';
 import concat from './concat';
 import length from './length';
 
-export default (fn, i, arr) => {
-  const arrLength = length(arr);
-  if (i >= arrLength || i < -arrLength) return arr;
+export default (i, fn, list) => {
+  const arrLength = length(list);
+  if (i >= arrLength || i < -arrLength) return list;
+
+  const arr = slice(0, Infinity, list);
 
   const idx = i < 0 ? arrLength + i : i;
-  const list = concat([], arr);
-  list[idx] = fn(list[idx]);
+  const newArr = concat([], arr);
+  newArr[idx] = fn(newArr[idx]);
 
-  return list;
+  return newArr;
 };
