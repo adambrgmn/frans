@@ -1,8 +1,6 @@
 import assoc from '../assoc';
 
 describe('Core.assoc', () => {
-  // expect(assoc('foo', 'bar', {})).toEqual({ foo: 'bar' });
-  // expect(assoc('foo', 'bar', { foo: 'baz' })).toEqual({ foo: 'bar' });
   test('makes a shallow clone of an object, overriding only the specified property', () => {
     const obj1 = { a: 1, b: { c: 2, d: 3 }, e: 4, f: 5 };
     const obj2 = assoc('e', { x: 42 }, obj1);
