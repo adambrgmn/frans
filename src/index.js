@@ -31,6 +31,7 @@ import keys from './keys';
 import last from './last';
 import length from './length';
 import map from './map';
+import modulo from './modulo';
 import multiply from './multiply';
 import negate from './negate';
 import nth from './nth';
@@ -83,6 +84,7 @@ export {
   last,
   length,
   map,
+  modulo,
   multiply,
   negate,
   nth,
