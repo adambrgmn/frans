@@ -50,6 +50,7 @@ import prop from './prop';
 import reduce from './reduce';
 import reduceBy from './reduceBy';
 import reduceRight from './reduceRight';
+import remove from './remove';
 import reverse from './reverse';
 import slice from './slice';
 import subtract from './subtract';
@@ -112,6 +113,7 @@ export {
   reduce,
   reduceBy,
   reduceRight,
+  remove,
   reverse,
   slice,
   subtract,
