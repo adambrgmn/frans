@@ -33,6 +33,7 @@ import nth from './nth';
 import pipe from './pipe';
 import pluck from './pluck';
 import prepend from './prepend';
+import product from './product';
 import prop from './prop';
 import reduce from './reduce';
 import reduceRight from './reduceRight';
@@ -80,6 +81,7 @@ export {
   pipe,
   pluck,
   prepend,
+  product,
   prop,
   reduce,
   reduceRight,
