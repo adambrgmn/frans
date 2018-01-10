@@ -1,6 +1,6 @@
 import length from './length';
 
-export default (fn, init, arr) => {
+const reduce = (fn, init, arr) => {
   let idx = 0;
   let accumulator = init;
   const len = length(arr);
@@ -12,3 +12,5 @@ export default (fn, init, arr) => {
 
   return accumulator;
 };
+
+export { reduce as default };

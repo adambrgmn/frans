@@ -1,3 +1,5 @@
 import is from './is';
 
-export default x => is('number', x);
+const isNumber = x => is('number', x);
+
+export { isNumber as default };

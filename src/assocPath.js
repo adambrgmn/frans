@@ -33,4 +33,4 @@ const assocPath = (path, value, obj) => {
   return assoc(idx, val, obj);
 };
 
-export default assocPath;
+export { assocPath as default };

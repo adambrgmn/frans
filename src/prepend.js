@@ -1,3 +1,5 @@
 import concat from './concat';
 
-export default (val, arr) => concat([val], arr);
+const prepend = (val, arr) => concat([val], arr);
+
+export { prepend as default };

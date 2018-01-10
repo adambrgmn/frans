@@ -2,7 +2,7 @@ import slice from './slice';
 import concat from './concat';
 import length from './length';
 
-export default (i, fn, list) => {
+const adjust = (i, fn, list) => {
   const arrLength = length(list);
   if (i >= arrLength || i < -arrLength) return list;
 
@@ -14,3 +14,5 @@ export default (i, fn, list) => {
 
   return newArr;
 };
+
+export { adjust as default };

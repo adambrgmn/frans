@@ -1,6 +1,6 @@
 import length from './length';
 
-export default (predicateFn, arr) => {
+const findIndex = (predicateFn, arr) => {
   let i = 0;
   const len = length(arr);
   if (len === 0) return -1;
@@ -13,3 +13,5 @@ export default (predicateFn, arr) => {
 
   return -1;
 };
+
+export { findIndex as default };

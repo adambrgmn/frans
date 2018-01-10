@@ -4,7 +4,7 @@ import has from './has';
 import length from './length';
 import nth from './nth';
 
-export const _keys = (function _keys() {
+const _keys = (function _keys() {
   const hasDontEnumBug = !Object.prototype.propertyIsEnumerable.call(
     { toString: null },
     'toString',
@@ -42,9 +42,11 @@ export const _keys = (function _keys() {
   };
 })();
 
-export default obj => {
+const keys = obj => {
   if (obj == null || Object(obj) !== obj) return [];
 
   if (Object.keys) return Object.keys(obj);
   return _keys(obj);
 };
+
+export { keys as default, _keys };

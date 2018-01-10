@@ -1,1 +1,3 @@
-export default x => () => x;
+const always = x => () => x;
+
+export { always as default };

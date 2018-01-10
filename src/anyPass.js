@@ -1,4 +1,4 @@
-export default (predicateList, ...el) => {
+const anyPass = (predicateList, ...el) => {
   const { length } = predicateList;
   let i = 0;
   let ret = false;
@@ -12,3 +12,5 @@ export default (predicateList, ...el) => {
 
   return ret;
 };
+
+export { anyPass as default };

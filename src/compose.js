@@ -1,3 +1,5 @@
 import reduceRight from './reduceRight';
 
-export default (...fns) => x => reduceRight((acc, fn) => fn(acc), x, fns);
+const compose = (...fns) => x => reduceRight((acc, fn) => fn(acc), x, fns);
+
+export { compose as default };

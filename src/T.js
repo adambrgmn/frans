@@ -1,3 +1,5 @@
 import always from './always';
 
-export default always(true);
+const T = always(true);
+
+export { T as default };

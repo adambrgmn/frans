@@ -18,7 +18,9 @@ const filterObj = (fn, obj) =>
     keys(obj),
   );
 
-export default (fn, arr) => {
+const filter = (fn, arr) => {
   if (isObject(arr)) return filterObj(fn, arr);
   return filterArray(fn, arr);
 };
+
+export { filter as default };
