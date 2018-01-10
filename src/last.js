@@ -1,3 +1,5 @@
 import nth from './nth';
 
-export default arr => nth(-1, arr);
+const last = arr => nth(-1, arr);
+
+export { last as default };

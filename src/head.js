@@ -1,3 +1,5 @@
 import nth from './nth';
 
-export default arr => nth(0, arr);
+const head = arr => nth(0, arr);
+
+export { head as default };

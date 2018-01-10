@@ -8,7 +8,7 @@ import length from './length';
 const mapObject = (fn, obj) =>
   reduce((acc, key) => assoc(key, fn(prop(key, obj)), acc), {}, keys(obj));
 
-export default (fn, arr) => {
+const map = (fn, arr) => {
   if (isObject(arr)) return mapObject(fn, arr);
 
   let idx = 0;
@@ -22,3 +22,5 @@ export default (fn, arr) => {
 
   return result;
 };
+
+export { map as default };

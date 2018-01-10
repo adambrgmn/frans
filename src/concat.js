@@ -2,7 +2,7 @@ import isString from './isString';
 import isArray from './isArray';
 import join from './join';
 
-export default (a, b) => {
+const concat = (a, b) => {
   if (isArray(a) && isArray(b)) {
     return [...a, ...b];
   }
@@ -13,3 +13,5 @@ export default (a, b) => {
 
   throw new TypeError('Both arguments must be of same type');
 };
+
+export { concat as default };

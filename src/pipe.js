@@ -1,3 +1,5 @@
 import reduce from './reduce';
 
-export default (...fns) => x => reduce((acc, fn) => fn(acc), x, fns);
+const pipe = (...fns) => x => reduce((acc, fn) => fn(acc), x, fns);
+
+export { pipe as default };

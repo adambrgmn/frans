@@ -1,2 +1,4 @@
 /* eslint-disable valid-typeof */
-export default (type, x) => typeof x === type;
+const is = (type, x) => typeof x === type;
+
+export { is as default };

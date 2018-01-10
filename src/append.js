@@ -1,3 +1,5 @@
 import concat from './concat';
 
-export default (el, list) => concat(list, [el]);
+const append = (el, list) => concat(list, [el]);
+
+export { append as default };

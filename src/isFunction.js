@@ -1,3 +1,5 @@
 import is from './is';
 
-export default x => is('function', x);
+const isFunction = x => is('function', x);
+
+export { isFunction as default };

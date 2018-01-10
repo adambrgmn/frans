@@ -1,6 +1,8 @@
 /* eslint-disable no-underscore-dangle */
 
-export const _isArray = arg =>
+const _isArray = arg =>
   Object.prototype.toString.call(arg) === '[object Array]';
 
-export default Array.isArray || _isArray;
+const isArray = Array.isArray || _isArray;
+
+export { isArray as default, _isArray };
