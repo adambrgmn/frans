@@ -9,6 +9,7 @@ import assocPath from './assocPath';
 import clamp from './clamp';
 import compose from './compose';
 import concat from './concat';
+import countBy from './countBy';
 import curry from './curry';
 import dec from './dec';
 import divide from './divide';
@@ -65,6 +66,7 @@ export {
   clamp,
   compose,
   concat,
+  countBy,
   curry,
   dec,
   divide,
