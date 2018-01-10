@@ -4,10 +4,12 @@ const fs = require('fs');
 const util = require('util');
 const prettier = require('prettier');
 const chalk = require('chalk');
+const cp = require('child_process');
 
 const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
 const access = util.promisify(fs.access);
+const exec = util.promisify(cp.exec);
 
 const paths = {
   index: () => path.join(process.cwd(), 'src', 'index.js'),
@@ -111,6 +113,19 @@ async function main() {
         modulesToCreate.join(', '),
       )} to index.js.`,
     );
+
+    try {
+      await exec(
+        `code ${modulesToCreate
+          .reduce(
+            (acc, name) => [...acc, paths.mod(name), paths.test(name)],
+            [],
+          )
+          .join(' ')}`,
+      );
+    } catch (err) {
+      // void
+    }
   } catch (err) {
     console.error(err);
   }
