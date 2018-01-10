@@ -1,16 +1,6 @@
-import reduce from './reduce';
-import prop from './prop';
-import assoc from './assoc';
+import reduceBy from './reduceBy';
+import inc from './inc';
 
-const countBy = (fn, list) =>
-  reduce(
-    (acc, item) => {
-      const key = fn(item);
-      const existingKey = prop(key, acc);
-      return assoc(key, existingKey ? existingKey + 1 : 1, acc);
-    },
-    {},
-    list,
-  );
+const countBy = (keyFn, list) => reduceBy(inc, 0, keyFn, list);
 
 export { countBy as default };

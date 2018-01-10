@@ -45,6 +45,7 @@ import prepend from './prepend';
 import product from './product';
 import prop from './prop';
 import reduce from './reduce';
+import reduceBy from './reduceBy';
 import reduceRight from './reduceRight';
 import reverse from './reverse';
 import slice from './slice';
@@ -102,6 +103,7 @@ export {
   product,
   prop,
   reduce,
+  reduceBy,
   reduceRight,
   reverse,
   slice,
