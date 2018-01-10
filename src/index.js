@@ -28,6 +28,7 @@ import keys from './keys';
 import last from './last';
 import length from './length';
 import map from './map';
+import multiply from './multiply';
 import nth from './nth';
 import pipe from './pipe';
 import pluck from './pluck';
@@ -74,9 +75,10 @@ export {
   last,
   length,
   map,
+  multiply,
   nth,
-  pluck,
   pipe,
+  pluck,
   prepend,
   prop,
   reduce,

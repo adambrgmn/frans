@@ -18,7 +18,7 @@ const paths = {
 const templates = {
   mod: name => `const ${name} = () => null;\n\nexport {${name} as default};`,
   test: name =>
-    `import { ${name} } from '../';\n\ndescribe('Core.${name}', () => { test('module will...', () => { expect(${name}()).not.toBe(null); }); });`,
+    `import ${name} from '../${name}';\n\ndescribe('Core.${name}', () => { test('module will...', () => { expect(${name}()).not.toBe(null); }); });`,
 };
 
 const format = code =>
