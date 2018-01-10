@@ -14,7 +14,8 @@
     "format": "frans-scripts format",
     "precommit": "frans-scripts precommit",
     "validate": "yarn run lint && yarn run test --coverage && yarn run build",
-    "release": "frans-scripts release"
+    "release": "frans-scripts release",
+    "create-module": "node scripts/create-module.js"
   },
   "devDependencies": {
     "cz-conventional-changelog": "^2.1.0",
