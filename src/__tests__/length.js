@@ -1,4 +1,4 @@
-import { length } from '../';
+import length from '../length';
 
 describe('Core.length', () => {
   test('returns the length of a list', () => {

@@ -1,4 +1,4 @@
-import { map } from '../';
+import map from '../map';
 
 describe('Core.map', () => {
   const times2 = x => x * 2;

@@ -1,4 +1,4 @@
-import { isNumber } from '../';
+import isNumber from '../isNumber';
 
 describe('Core.isNumber', () => {
   test('checks if a value is a number using typeof', () => {

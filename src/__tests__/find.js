@@ -1,4 +1,4 @@
-import { find } from '../';
+import find from '../find';
 
 describe('Core.find', () => {
   const obj1 = { x: 100 };

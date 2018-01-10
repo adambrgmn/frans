@@ -1,4 +1,4 @@
-import { filter } from '../';
+import filter from '../filter';
 
 describe('Core.filter', () => {
   const even = x => x % 2 === 0;

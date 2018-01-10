@@ -1,4 +1,4 @@
-import { pluck } from '../';
+import pluck from '../pluck';
 
 describe('Core.pluck', () => {
   test('maps the appropriate property over an array', () => {

@@ -1,4 +1,4 @@
-import { sum } from '../';
+import sum from '../sum';
 
 describe('Core.sum', () => {
   test('adds all numbers in a list', () => {

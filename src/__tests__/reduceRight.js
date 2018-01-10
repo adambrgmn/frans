@@ -1,4 +1,4 @@
-import { reduceRight } from '../';
+import reduceRight from '../reduceRight';
 
 describe('Core.reduceRight', () => {
   const add = (x, y) => x + y;

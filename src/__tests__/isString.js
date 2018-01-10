@@ -1,4 +1,4 @@
-import { isString } from '../';
+import isString from '../isString';
 
 describe('Core.isString', () => {
   test('checks if a value is a string using typeof', () => {

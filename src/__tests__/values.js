@@ -1,5 +1,5 @@
-import { values, map } from '../';
-import { _values } from '../values';
+import { map } from '../';
+import values, { _values } from '../values';
 
 describe('Core.values', () => {
   const obj = {

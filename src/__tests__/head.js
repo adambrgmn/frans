@@ -1,4 +1,4 @@
-import { head } from '../';
+import head from '../head';
 
 describe('Core.head', () => {
   test('returns the first element of an array', () => {

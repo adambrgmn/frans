@@ -1,4 +1,4 @@
-import { update } from '../';
+import update from '../update';
 
 describe('Core.update', () => {
   // const list = [1, 2, 3];

@@ -1,4 +1,4 @@
-import { assoc } from '../';
+import assoc from '../assoc';
 
 describe('Core.assoc', () => {
   // expect(assoc('foo', 'bar', {})).toEqual({ foo: 'bar' });

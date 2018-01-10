@@ -1,4 +1,4 @@
-import { adjust } from '../';
+import adjust from '../adjust';
 
 describe('Core.adjust', () => {
   const add = x => y => x + y;
