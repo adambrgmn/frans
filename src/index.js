@@ -31,6 +31,8 @@ import keys from './keys';
 import last from './last';
 import length from './length';
 import map from './map';
+import mean from './mean';
+import median from './median';
 import modulo from './modulo';
 import multiply from './multiply';
 import negate from './negate';
@@ -84,6 +86,8 @@ export {
   last,
   length,
   map,
+  mean,
+  median,
   modulo,
   multiply,
   negate,
