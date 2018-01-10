@@ -38,6 +38,7 @@ import reduceRight from './reduceRight';
 import reverse from './reverse';
 import slice from './slice';
 import subtract from './subtract';
+import sum from './sum';
 import T from './T';
 import update from './update';
 import values from './values';
@@ -83,6 +84,7 @@ export {
   reverse,
   slice,
   subtract,
+  sum,
   T,
   update,
   values,
