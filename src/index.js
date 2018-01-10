@@ -29,6 +29,7 @@ import last from './last';
 import length from './length';
 import map from './map';
 import multiply from './multiply';
+import negate from './negate';
 import nth from './nth';
 import pipe from './pipe';
 import pluck from './pluck';
@@ -77,6 +78,7 @@ export {
   length,
   map,
   multiply,
+  negate,
   nth,
   pipe,
   pluck,
