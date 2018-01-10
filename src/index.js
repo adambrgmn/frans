@@ -10,6 +10,7 @@ import compose from './compose';
 import concat from './concat';
 import curry from './curry';
 import dec from './dec';
+import divide from './divide';
 import F from './F';
 import filter from './filter';
 import find from './find';
@@ -61,6 +62,7 @@ export {
   concat,
   curry,
   dec,
+  divide,
   F,
   filter,
   find,
