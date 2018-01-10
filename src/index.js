@@ -6,6 +6,7 @@ import anyPass from './anyPass';
 import append from './append';
 import assoc from './assoc';
 import assocPath from './assocPath';
+import clamp from './clamp';
 import compose from './compose';
 import concat from './concat';
 import curry from './curry';
@@ -61,6 +62,7 @@ export {
   append,
   assoc,
   assocPath,
+  clamp,
   compose,
   concat,
   curry,
