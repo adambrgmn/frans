@@ -1,6 +1,5 @@
 import is from './is';
-import isArray from './isArray';
 
-const isObject = x => is('object', x) && !isArray(x) && x !== null;
+const isObject = x => is('Object', x);
 
 export { isObject as default };

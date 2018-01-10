@@ -53,6 +53,7 @@ import slice from './slice';
 import subtract from './subtract';
 import sum from './sum';
 import T from './T';
+import type from './type';
 import update from './update';
 import values from './values';
 
@@ -112,6 +113,7 @@ export {
   subtract,
   sum,
   T,
+  type,
   update,
   values,
 };
