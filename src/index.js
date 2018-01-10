@@ -40,6 +40,7 @@ import modulo from './modulo';
 import multiply from './multiply';
 import negate from './negate';
 import nth from './nth';
+import path from './path';
 import pipe from './pipe';
 import pluck from './pluck';
 import prepend from './prepend';
@@ -100,6 +101,7 @@ export {
   multiply,
   negate,
   nth,
+  path,
   pipe,
   pluck,
   prepend,
