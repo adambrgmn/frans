@@ -9,12 +9,14 @@ import assocPath from './assocPath';
 import compose from './compose';
 import concat from './concat';
 import curry from './curry';
+import dec from './dec';
 import F from './F';
 import filter from './filter';
 import find from './find';
 import findIndex from './findIndex';
 import has from './has';
 import head from './head';
+import inc from './inc';
 import insert from './insert';
 import is from './is';
 import isArray from './isArray';
@@ -58,12 +60,14 @@ export {
   compose,
   concat,
   curry,
+  dec,
   F,
   filter,
   find,
   findIndex,
   has,
   head,
+  inc,
   insert,
   is,
   isArray,
