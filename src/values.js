@@ -1,5 +1,4 @@
 /* eslint-disable no-underscore-dangle */
-
 import append from './append';
 import keys from './keys';
 import prop from './prop';
