@@ -17,6 +17,7 @@ import F from './F';
 import filter from './filter';
 import find from './find';
 import findIndex from './findIndex';
+import groupBy from './groupBy';
 import has from './has';
 import head from './head';
 import inc from './inc';
@@ -75,6 +76,7 @@ export {
   filter,
   find,
   findIndex,
+  groupBy,
   has,
   head,
   inc,
