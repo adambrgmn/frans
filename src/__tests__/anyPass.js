@@ -1,4 +1,4 @@
-import { anyPass } from '../';
+import anyPass from '../anyPass';
 
 describe('Core.anyPass', () => {
   const odd = n => n % 2 !== 0;

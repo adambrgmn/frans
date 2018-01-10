@@ -1,4 +1,4 @@
-import { assocPath } from '../';
+import assocPath from '../assocPath';
 
 describe('Core.assocPath', () => {
   test('makes a shallow clone of an object, overriding only what is necessary for the path', () => {

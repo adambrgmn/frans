@@ -1,4 +1,4 @@
-import { slice } from '../';
+import slice from '../slice';
 
 describe('Core.slice', () => {
   test('retrieves the proper sublist of a list', () => {

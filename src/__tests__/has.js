@@ -1,4 +1,4 @@
-import { has } from '../';
+import has from '../has';
 
 describe('Core.has', () => {
   const fred = { name: 'Fred', age: 23 };

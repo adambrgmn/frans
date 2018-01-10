@@ -1,4 +1,4 @@
-import { add } from '../';
+import add from '../add';
 
 describe('Core.add', () => {
   test('adds to numbers together', () => {

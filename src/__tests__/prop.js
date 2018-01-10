@@ -1,4 +1,4 @@
-import { prop } from '../';
+import prop from '../prop';
 
 describe('Core.prop', () => {
   test('fetches the appropriate prop from an object', () => {

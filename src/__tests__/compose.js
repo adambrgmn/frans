@@ -1,4 +1,4 @@
-import { compose } from '../';
+import compose from '../compose';
 
 describe('Core.compose', () => {
   const capitalize = x => `${x[0].toUpperCase()}${x.substring(1)}`;

@@ -1,4 +1,4 @@
-import { reduce } from '../';
+import reduce from '../reduce';
 
 describe('Core.reduce', () => {
   const add = (x, y) => x + y;

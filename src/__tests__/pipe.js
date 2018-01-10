@@ -1,4 +1,4 @@
-import { pipe } from '../';
+import pipe from '../pipe';
 
 describe('Core.pipe', () => {
   const capitalize = x => `${x[0].toUpperCase()}${x.substring(1)}`;

@@ -1,4 +1,4 @@
-import { findIndex } from '../';
+import findIndex from '../findIndex';
 
 describe('Core.findIndex', () => {
   const obj1 = { x: 100 };

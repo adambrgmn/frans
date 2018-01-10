@@ -1,4 +1,4 @@
-import { multiply } from '../';
+import multiply from '../multiply';
 
 describe('Core.multiply', () => {
   test('module will...', () => {
