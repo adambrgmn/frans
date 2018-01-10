@@ -12,6 +12,7 @@ import concat from './concat';
 import countBy from './countBy';
 import curry from './curry';
 import dec from './dec';
+import dissoc from './dissoc';
 import divide from './divide';
 import F from './F';
 import filter from './filter';
@@ -73,6 +74,7 @@ export {
   countBy,
   curry,
   dec,
+  dissoc,
   divide,
   F,
   filter,
