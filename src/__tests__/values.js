@@ -2,16 +2,20 @@ import { map } from '../';
 import values, { _values } from '../values';
 
 describe('Core.values', () => {
-  const obj = {
-    a: 100,
-    b: [1, 2, 3],
-    c: { x: 200, y: 300 },
-    d: 'D',
-    e: null,
-    f: undefined,
-  };
+  beforeEach(() => {
+    jest.resetModules();
+  });
 
   test("returns an array of the given object's values", () => {
+    const obj = {
+      a: 100,
+      b: [1, 2, 3],
+      c: { x: 200, y: 300 },
+      d: 'D',
+      e: null,
+      f: undefined,
+    };
+
     const vs = values(obj).sort();
     const ts = [[1, 2, 3], 100, 'D', { x: 200, y: 300 }, null, undefined];
 
@@ -58,6 +62,14 @@ describe('Core.values', () => {
     ]);
 
     expect(result).toEqual([[], [], [], [], [], [], [], [], [], []]);
+  });
+
+  test('falls back to internal _values if Object.values is undefined', () => {
+    const nativeValues = Object.values;
+    delete Object.values;
+
+    expect(values({ foo: 'bar', bar: 'foo' })).toEqual(['bar', 'foo']);
+    Object.values = nativeValues;
   });
 });
 
