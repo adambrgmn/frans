@@ -66,6 +66,7 @@ import sort from './sort';
 import subtract from './subtract';
 import sum from './sum';
 import T from './T';
+import tap from './tap';
 import type from './type';
 import update from './update';
 import values from './values';
@@ -139,6 +140,7 @@ export {
   subtract,
   sum,
   T,
+  tap,
   type,
   update,
   values,
