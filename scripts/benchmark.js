@@ -1,4 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies, no-console, global-require */
+/* eslint-disable */
 const { Suite } = require('benchmark');
 const chalk = require('chalk');
 const ora = require('ora');
@@ -8,12 +8,11 @@ const ora = require('ora');
  * being the name and the other the function to benchmark.
  */
 function setup() {
-  const { reverse } = require('../dist');
-  const list = Array.from({ length: 1000 }).map((_, i) => i);
+  const { add } = require('../dist');
 
   return [
-    ['reverse.native', () => list.reverse()],
-    ['reverse.local', () => reverse(list)],
+    ['add.native', () => 1000 + 1010],
+    ['add.current', () => add(1000, 1010)],
   ];
 }
 
@@ -29,6 +28,11 @@ const suite = new Suite('benchmark', {
   onCycle(e) {
     spinner.text = `${e.target}`;
     spinner.succeed();
+  },
+  onError(e) {
+    spinner.text = e.target.error.message;
+    spinner.fail();
+    console.error(e.target.error);
   },
   onComplete() {
     const fastest = this.filter('fastest').map('name');
