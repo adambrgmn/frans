@@ -1,3 +1,5 @@
+import sort from './sort';
+import subtract from './subtract';
 import length from './length';
 import divide from './divide';
 import modulo from './modulo';
@@ -6,12 +8,7 @@ import slice from './slice';
 import mean from './mean';
 
 const median = list => {
-  const sorted = Array.prototype.sort.call(list, (a, b) => {
-    if (a > b) return 1;
-    if (a < b) return -1;
-    return 0;
-  });
-
+  const sorted = sort(subtract, list);
   const l = length(sorted);
   const half = divide(l, 2);
 
