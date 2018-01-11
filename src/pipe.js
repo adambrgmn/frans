@@ -1,5 +1,8 @@
+/* eslint-disable no-underscore-dangle */
+
 import reduce from './reduce';
 
-const pipe = (...fns) => x => reduce((acc, fn) => fn(acc), x, fns);
+const _pipe = (f, g) => x => g(f(x));
+const pipe = (init, ...fns) => reduce(_pipe, init, fns);
 
 export { pipe as default };

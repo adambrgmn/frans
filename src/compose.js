@@ -1,5 +1,6 @@
-import reduceRight from './reduceRight';
+import pipe from './pipe';
+import reverse from './reverse';
 
-const compose = (...fns) => x => reduceRight((acc, fn) => fn(acc), x, fns);
+const compose = (...fns) => pipe(...reverse(fns));
 
 export { compose as default };
