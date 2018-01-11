@@ -10,6 +10,7 @@ import assoc from './assoc';
 import assocPath from './assocPath';
 import both from './both';
 import clamp from './clamp';
+import complement from './complement';
 import compose from './compose';
 import concat from './concat';
 import countBy from './countBy';
@@ -77,6 +78,7 @@ export {
   assocPath,
   both,
   clamp,
+  complement,
   compose,
   concat,
   countBy,
