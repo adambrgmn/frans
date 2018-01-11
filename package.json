@@ -16,7 +16,7 @@
     "validate": "yarn run lint && yarn run test --coverage && yarn run build",
     "release": "frans-scripts release",
     "create-module": "node scripts/create-module.js",
-    "bench": "node scripts/benchmark.js"
+    "bench": "frans-scripts build && node scripts/benchmark.js"
   },
   "devDependencies": {
     "benchmark": "^2.1.4",
