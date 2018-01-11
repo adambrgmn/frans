@@ -17,6 +17,7 @@ import curry from './curry';
 import dec from './dec';
 import dissoc from './dissoc';
 import divide from './divide';
+import either from './either';
 import F from './F';
 import filter from './filter';
 import find from './find';
@@ -83,6 +84,7 @@ export {
   dec,
   dissoc,
   divide,
+  either,
   F,
   filter,
   find,
