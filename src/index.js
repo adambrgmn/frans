@@ -14,6 +14,7 @@ import clamp from './clamp';
 import comparator from './comparator';
 import complement from './complement';
 import compose from './compose';
+import composeP from './composeP';
 import concat from './concat';
 import countBy from './countBy';
 import curry from './curry';
@@ -85,6 +86,7 @@ export {
   comparator,
   complement,
   compose,
+  composeP,
   concat,
   countBy,
   curry,
