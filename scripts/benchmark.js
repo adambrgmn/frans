@@ -8,13 +8,12 @@ const ora = require('ora');
  * being the name and the other the function to benchmark.
  */
 function setup() {
-  const { reduce } = require('../dist/frans.cjs');
-  const list = ['a', 'b', 'c', 'd'];
-  const accFn = (acc, char) => `${acc} - ${char}`;
+  const { reverse } = require('../dist');
+  const list = Array.from({ length: 1000 }).map((_, i) => i);
 
   return [
-    ['reduce.native', () => list.reduce(accFn, '')],
-    ['reduce.local', () => reduce(accFn, '', list)],
+    ['reverse.native', () => list.reverse()],
+    ['reverse.local', () => reverse(list)],
   ];
 }
 
@@ -23,7 +22,7 @@ function setup() {
  */
 
 const spinner = ora('Running benchmarks');
-const suite = new Suite('reduce', {
+const suite = new Suite('benchmark', {
   onStart() {
     spinner.start();
   },
