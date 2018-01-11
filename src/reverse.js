@@ -1,15 +1,15 @@
-import reduceRight from './reduceRight';
-import pipe from './pipe';
-import isArray from './isArray';
-import append from './append';
-import join from './join';
+/* eslint-disable no-underscore-dangle */
+import isString from './isString';
 
-const reverse = arr => {
-  const reverseArray = list => reduceRight((a, e) => append(e, a), [], list);
-  const reverseString = pipe(s => s.split(''), reverseArray, a => join('', a));
-
-  if (isArray(arr)) return reverseArray(arr);
-  return reverseString(arr);
+const _reverseString = str => {
+  let ret = '';
+  for (let i = str.length - 1; i >= 0; i--) ret += str[i];
+  return ret;
 };
 
-export { reverse as default };
+const reverse = list => {
+  if (isString(list)) return _reverseString(list);
+  return list.reverse();
+};
+
+export { reverse as default, _reverseString };
