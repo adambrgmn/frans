@@ -10,6 +10,7 @@ import assoc from './assoc';
 import assocPath from './assocPath';
 import both from './both';
 import clamp from './clamp';
+import comparator from './comparator';
 import complement from './complement';
 import compose from './compose';
 import concat from './concat';
@@ -79,6 +80,7 @@ export {
   assocPath,
   both,
   clamp,
+  comparator,
   complement,
   compose,
   concat,
