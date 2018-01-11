@@ -1,4 +1,5 @@
 import add from './add';
+import addIndex from './addIndex';
 import adjust from './adjust';
 import all from './all';
 import allPass from './allPass';
@@ -69,6 +70,7 @@ import values from './values';
 
 export {
   add,
+  addIndex,
   adjust,
   all,
   allPass,
