@@ -51,6 +51,7 @@ import negate from './negate';
 import nth from './nth';
 import path from './path';
 import pipe from './pipe';
+import pipeP from './pipeP';
 import pluck from './pluck';
 import prepend from './prepend';
 import product from './product';
@@ -123,6 +124,7 @@ export {
   nth,
   path,
   pipe,
+  pipeP,
   pluck,
   prepend,
   product,
