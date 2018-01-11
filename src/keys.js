@@ -1,5 +1,4 @@
 /* eslint-disable no-underscore-dangle, no-restricted-syntax */
-import isObject from './isObject';
 import has from './has';
 import length from './length';
 import nth from './nth';
@@ -23,8 +22,6 @@ const _keys = (function _keys() {
   const dontEnumsLength = length(dontEnums);
 
   return obj => {
-    if (!isObject(obj)) throw new TypeError('Keys called on non-object');
-
     const result = [];
 
     for (const prop in obj) {
