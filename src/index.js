@@ -46,6 +46,7 @@ import map from './map';
 import mean from './mean';
 import median from './median';
 import memoizeWith from './memoizeWith';
+import memoizeWithP from './memoizeWithP';
 import modulo from './modulo';
 import multiply from './multiply';
 import negate from './negate';
@@ -123,6 +124,7 @@ export {
   mean,
   median,
   memoizeWith,
+  memoizeWithP,
   modulo,
   multiply,
   negate,
