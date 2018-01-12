@@ -1,24 +1,19 @@
-import has from './has';
-import prop from './prop';
+/* eslint-disable no-underscore-dangle */
+import _createCache from './internal/createCache';
 
-const memoizeWithP = keyFn => asyncFn => {
-  const cache = {};
-  const isCached = key => has(key, cache);
-  const updateCache = (key, val) => {
-    cache[key] = val;
-  };
-  const getKey = key => new Promise(resolve => resolve(prop(key, cache)));
+const memoizeWithP = (keyFn, createCache = _createCache) => asyncFn => {
+  const { has, set, get } = createCache();
 
   return (...args) => {
     const key = keyFn(...args);
-    if (!isCached(key)) {
+    if (!has(key)) {
       return asyncFn(...args).then(val => {
-        updateCache(key, val);
+        set(key, val);
         return val;
       });
     }
 
-    return getKey(key);
+    return Promise.resolve(get(key));
   };
 };
 

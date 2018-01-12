@@ -1,24 +1,19 @@
-import has from './has';
-import prop from './prop';
+/* eslint-disable no-underscore-dangle */
+import _createCache from './internal/createCache';
 
-const memoizeWith = keyFn => fn => {
-  const cache = {};
-  const isCached = key => has(key, cache);
-  const getKey = key => prop(key, cache);
-  const updateCache = (key, val) => {
-    cache[key] = val;
-  };
+const memoizeWith = (keyFn, createCache = _createCache) => fn => {
+  const { has, set, get } = createCache();
 
   return (...args) => {
     const key = keyFn(...args);
 
-    if (!isCached(key)) {
+    if (!has(key)) {
       const val = fn(...args);
-      updateCache(key, val);
+      set(key, val);
       return val;
     }
 
-    return getKey(key);
+    return get(key);
   };
 };
 
