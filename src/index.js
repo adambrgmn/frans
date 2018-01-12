@@ -72,6 +72,7 @@ import subtract from './subtract';
 import sum from './sum';
 import T from './T';
 import tap from './tap';
+import throttle from './throttle';
 import type from './type';
 import update from './update';
 import values from './values';
@@ -151,6 +152,7 @@ export {
   sum,
   T,
   tap,
+  throttle,
   type,
   update,
   values,
