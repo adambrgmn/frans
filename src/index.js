@@ -63,6 +63,7 @@ import remove from './remove';
 import reverse from './reverse';
 import slice from './slice';
 import sort from './sort';
+import split from './split';
 import subtract from './subtract';
 import sum from './sum';
 import T from './T';
@@ -137,6 +138,7 @@ export {
   reverse,
   slice,
   sort,
+  split,
   subtract,
   sum,
   T,
