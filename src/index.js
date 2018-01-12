@@ -57,6 +57,7 @@ import pluck from './pluck';
 import prepend from './prepend';
 import product from './product';
 import prop from './prop';
+import range from './range';
 import reduce from './reduce';
 import reduceBy from './reduceBy';
 import reduceRight from './reduceRight';
@@ -133,6 +134,7 @@ export {
   prepend,
   product,
   prop,
+  range,
   reduce,
   reduceBy,
   reduceRight,
