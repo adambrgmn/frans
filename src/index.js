@@ -18,6 +18,7 @@ import composeP from './composeP';
 import concat from './concat';
 import countBy from './countBy';
 import curry from './curry';
+import debounce from './debounce';
 import dec from './dec';
 import dissoc from './dissoc';
 import divide from './divide';
@@ -96,6 +97,7 @@ export {
   concat,
   countBy,
   curry,
+  debounce,
   dec,
   dissoc,
   divide,
