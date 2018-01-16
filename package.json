@@ -2,8 +2,10 @@
   "name": "frans",
   "version": "0.0.0-semantically-released",
   "description": "A minimal functional programming library",
-  "main": "build/index.js",
-  "module": "build/frans.js",
+  "main": "dist/frans.cjs.js",
+  "jsnext:main": "dist/frans.esm.js",
+  "module": "dist/frans.esm.js",
+  "files": ["dist"],
   "repository": {
     "type": "git",
     "url": "https://github.com/adambrgmn/frans.git"
