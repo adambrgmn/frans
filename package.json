@@ -27,7 +27,7 @@
     "benchmark": "^2.1.4",
     "cz-conventional-changelog": "^2.1.0",
     "frans-scripts": "^2.1.2",
-    "ora": "^1.3.0"
+    "ora": "^1.4.0"
   },
   "dependencies": {},
   "config": {
