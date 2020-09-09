@@ -1,11 +1,11 @@
 import { PredicateFn } from './internal/types';
 
-export function allPass<T>(predicateList: PredicateFn<T>[], ...args: T[]) {
+export function anyPass<T>(predicateList: PredicateFn<T>[], ...args: T[]) {
   const { length } = predicateList;
   let i = 0;
-  let ret = true;
+  let ret = false;
 
-  while (ret) {
+  while (!ret) {
     if (i >= length) break;
 
     ret = predicateList[i](...args);

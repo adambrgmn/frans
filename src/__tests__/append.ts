@@ -3,7 +3,11 @@ import { append } from '../append';
 describe('Core.append', () => {
   test('adds the element to the end of the list', () => {
     expect(append('z', ['x', 'y'])).toEqual(['x', 'y', 'z']);
-    expect(append(['a', 'z'], ['x', 'y'])).toEqual(['x', 'y', ['a', 'z']]);
+    expect(append(['a', 'z'], ['x', 'y'] as (string | string[])[])).toEqual([
+      'x',
+      'y',
+      ['a', 'z'],
+    ]);
   });
 
   test('works on empty list', () => {
