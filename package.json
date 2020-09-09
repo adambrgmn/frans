@@ -25,6 +25,7 @@
     "build": "microbundle",
     "test": "jest",
     "lint": "eslint src scripts",
+    "type-check": "tsc --noEmit",
     "validate": "yarn run lint && yarn run test --coverage && yarn run build",
     "release": "yarn build && yarn changeset publish",
     "create-module": "node scripts/create-module.js"

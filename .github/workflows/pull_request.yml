@@ -34,6 +34,9 @@ jobs:
       - name: Lint
         run: yarn lint
 
+      - name: Type Check
+        run: yarn type-check
+
       - name: Test
         uses: mattallty/jest-github-action@v1.0.3
         env:
