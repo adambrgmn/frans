@@ -1,4 +1,4 @@
-import type from '../type';
+import { type } from '../type';
 
 describe('Core.type', () => {
   test('"Array" if given an array literal', () => {

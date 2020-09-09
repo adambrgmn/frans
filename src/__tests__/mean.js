@@ -1,4 +1,4 @@
-import mean from '../mean';
+import { mean } from '../mean';
 
 describe('Core.mean', () => {
   test('return mean from a list of numbers', () => {

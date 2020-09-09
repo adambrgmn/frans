@@ -1,5 +1,5 @@
-import nth from './nth';
+import { nth } from './nth';
 
-const head = arr => nth(0, arr);
+const head = (arr) => nth(0, arr);
 
-export { head as default };
+export { head };

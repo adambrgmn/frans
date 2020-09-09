@@ -1,9 +1,9 @@
-import either from '../either';
+import { either } from '../either';
 
 describe('Core.either', () => {
   test('combines two boolean-returning functions into one', () => {
-    const even = x => x % 2 === 0;
-    const gt10 = x => x > 10;
+    const even = (x) => x % 2 === 0;
+    const gt10 = (x) => x > 10;
     const f = either(even, gt10);
     expect(f(8)).toBeTruthy();
     expect(f(13)).toBeTruthy();

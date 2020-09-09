@@ -1,6 +1,6 @@
-import slice from './slice';
-import concat from './concat';
-import length from './length';
+import { slice } from './slice';
+import { concat } from './concat';
+import { length } from './length';
 
 const adjust = (i, fn, list) => {
   const arrLength = length(list);
@@ -15,4 +15,4 @@ const adjust = (i, fn, list) => {
   return newArr;
 };
 
-export { adjust as default };
+export { adjust };

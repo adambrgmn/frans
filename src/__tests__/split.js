@@ -1,4 +1,4 @@
-import split from '../split';
+import { split } from '../split';
 
 describe('Core.split', () => {
   test('split a string into an array', () => {

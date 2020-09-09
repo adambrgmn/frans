@@ -1,4 +1,4 @@
-import divide from '../divide';
+import { divide } from '../divide';
 
 describe('Core.divide', () => {
   test('divide two numbers', () => {

@@ -1,159 +1,78 @@
-import add from './add';
-import addIndex from './addIndex';
-import adjust from './adjust';
-import all from './all';
-import allPass from './allPass';
-import always from './always';
-import any from './any';
-import anyPass from './anyPass';
-import append from './append';
-import assoc from './assoc';
-import assocPath from './assocPath';
-import both from './both';
-import clamp from './clamp';
-import comparator from './comparator';
-import complement from './complement';
-import compose from './compose';
-import composeP from './composeP';
-import concat from './concat';
-import countBy from './countBy';
-import curry from './curry';
-import debounce from './debounce';
-import dec from './dec';
-import dissoc from './dissoc';
-import divide from './divide';
-import either from './either';
-import F from './F';
-import filter from './filter';
-import find from './find';
-import findIndex from './findIndex';
-import groupBy from './groupBy';
-import has from './has';
-import head from './head';
-import inc from './inc';
-import insert from './insert';
-import is from './is';
-import isArray from './isArray';
-import isFunction from './isFunction';
-import isNil from './isNil';
-import isNumber from './isNumber';
-import isObject from './isObject';
-import isString from './isString';
-import join from './join';
-import keys from './keys';
-import last from './last';
-import length from './length';
-import map from './map';
-import mean from './mean';
-import median from './median';
-import memoizeWith from './memoizeWith';
-import memoizeWithP from './memoizeWithP';
-import modulo from './modulo';
-import multiply from './multiply';
-import negate from './negate';
-import nth from './nth';
-import path from './path';
-import pipe from './pipe';
-import pipeP from './pipeP';
-import pluck from './pluck';
-import prepend from './prepend';
-import product from './product';
-import prop from './prop';
-import range from './range';
-import reduce from './reduce';
-import reduceBy from './reduceBy';
-import reduceRight from './reduceRight';
-import remove from './remove';
-import reverse from './reverse';
-import slice from './slice';
-import sort from './sort';
-import split from './split';
-import subtract from './subtract';
-import sum from './sum';
-import T from './T';
-import tap from './tap';
-import throttle from './throttle';
-import type from './type';
-import update from './update';
-import values from './values';
-
-export {
-  add,
-  addIndex,
-  adjust,
-  all,
-  allPass,
-  always,
-  any,
-  anyPass,
-  append,
-  assoc,
-  assocPath,
-  both,
-  clamp,
-  comparator,
-  complement,
-  compose,
-  composeP,
-  concat,
-  countBy,
-  curry,
-  debounce,
-  dec,
-  dissoc,
-  divide,
-  either,
-  F,
-  filter,
-  find,
-  findIndex,
-  groupBy,
-  has,
-  head,
-  inc,
-  insert,
-  is,
-  isArray,
-  isFunction,
-  isNil,
-  isNumber,
-  isObject,
-  isString,
-  join,
-  keys,
-  last,
-  length,
-  map,
-  mean,
-  median,
-  memoizeWith,
-  memoizeWithP,
-  modulo,
-  multiply,
-  negate,
-  nth,
-  path,
-  pipe,
-  pipeP,
-  pluck,
-  prepend,
-  product,
-  prop,
-  range,
-  reduce,
-  reduceBy,
-  reduceRight,
-  remove,
-  reverse,
-  slice,
-  sort,
-  split,
-  subtract,
-  sum,
-  T,
-  tap,
-  throttle,
-  type,
-  update,
-  values,
-};
+export * from './add';
+export * from './addIndex';
+export * from './adjust';
+export * from './all';
+export * from './allPass';
+export * from './always';
+export * from './any';
+export * from './anyPass';
+export * from './append';
+export * from './assoc';
+export * from './assocPath';
+export * from './both';
+export * from './clamp';
+export * from './comparator';
+export * from './complement';
+export * from './compose';
+export * from './composeP';
+export * from './concat';
+export * from './countBy';
+export * from './curry';
+export * from './debounce';
+export * from './dec';
+export * from './dissoc';
+export * from './divide';
+export * from './either';
+export * from './F';
+export * from './filter';
+export * from './find';
+export * from './findIndex';
+export * from './groupBy';
+export * from './has';
+export * from './head';
+export * from './inc';
+export * from './insert';
+export * from './is';
+export * from './isArray';
+export * from './isFunction';
+export * from './isNil';
+export * from './isNumber';
+export * from './isObject';
+export * from './isString';
+export * from './join';
+export * from './keys';
+export * from './last';
+export * from './length';
+export * from './map';
+export * from './mean';
+export * from './median';
+export * from './memoizeWith';
+export * from './memoizeWithP';
+export * from './modulo';
+export * from './multiply';
+export * from './negate';
+export * from './nth';
+export * from './path';
+export * from './pipe';
+export * from './pipeP';
+export * from './pluck';
+export * from './prepend';
+export * from './product';
+export * from './prop';
+export * from './range';
+export * from './reduce';
+export * from './reduceBy';
+export * from './reduceRight';
+export * from './remove';
+export * from './reverse';
+export * from './slice';
+export * from './sort';
+export * from './split';
+export * from './subtract';
+export * from './sum';
+export * from './T';
+export * from './tap';
+export * from './throttle';
+export * from './type';
+export * from './update';
+export * from './values';

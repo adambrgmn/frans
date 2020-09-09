@@ -1,7 +1,7 @@
 /* eslint-disable no-underscore-dangle, no-restricted-syntax */
-import has from './has';
-import length from './length';
-import nth from './nth';
+import { has } from './has';
+import { length } from './length';
+import { nth } from './nth';
 
 const _keys = (function _keys() {
   const hasDontEnumBug = !Object.prototype.propertyIsEnumerable.call(
@@ -21,7 +21,7 @@ const _keys = (function _keys() {
 
   const dontEnumsLength = length(dontEnums);
 
-  return obj => {
+  return (obj) => {
     const result = [];
 
     for (const prop in obj) {
@@ -39,11 +39,11 @@ const _keys = (function _keys() {
   };
 })();
 
-const keys = obj => {
+const keys = (obj) => {
   if (obj == null || Object(obj) !== obj) return [];
 
   if (Object.keys) return Object.keys(obj);
   return _keys(obj);
 };
 
-export { keys as default, _keys };
+export { keys, _keys };

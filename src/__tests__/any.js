@@ -1,7 +1,7 @@
-import any from '../any';
+import { any } from '../any';
 
 describe('Core.any', () => {
-  const odd = n => n % 2 === 1;
+  const odd = (n) => n % 2 === 1;
   const T = () => true;
 
   test('returns true if any element satisfies the predicate', () => {
@@ -13,7 +13,7 @@ describe('Core.any', () => {
   });
 
   test('works with more complex objects', () => {
-    const alliterative = p => p.first.charAt(0) === p.last.charAt(0);
+    const alliterative = (p) => p.first.charAt(0) === p.last.charAt(0);
     const people = [
       { first: 'Paul', last: 'Grenier' },
       { first: 'Mike', last: 'Hurley' },
@@ -27,7 +27,7 @@ describe('Core.any', () => {
   });
 
   test('can use a configurable function', () => {
-    const atLeast = age => p => p.age >= age;
+    const atLeast = (age) => (p) => p.age >= age;
     const teens = [
       { name: 'Alice', age: 14 },
       { name: 'Betty', age: 18 },

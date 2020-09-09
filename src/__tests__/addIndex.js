@@ -1,9 +1,9 @@
-import addIndex from '../addIndex';
+import { addIndex } from '../addIndex';
 import { map, reduce, all } from '../';
 
 describe('Core.addIndex', () => {
   describe('unary functions like `map`', () => {
-    const times2 = x => x * 2;
+    const times2 = (x) => x * 2;
     const addIndexParam = (x, idx) => x + idx;
     const squareEnds = (x, idx, list) =>
       idx === 0 || idx === list.length - 1 ? x * x : x;
@@ -63,7 +63,7 @@ describe('Core.addIndex', () => {
 
   describe('works with functions like `all` that do not typically have index applied', () => {
     const allIndexed = addIndex(all);
-    const superDiagonal = list => allIndexed((a, b) => a > b, list);
+    const superDiagonal = (list) => allIndexed((a, b) => a > b, list);
 
     test('passes the index as a second parameter', () => {
       expect(superDiagonal([8, 6, 5, 4, 9])).toBeTruthy();
@@ -72,7 +72,7 @@ describe('Core.addIndex', () => {
   });
 
   describe('works with userdefined functions as well', () => {
-    const callIndexed = addIndex(fn => (...args) => fn(...args));
+    const callIndexed = addIndex((fn) => (...args) => fn(...args));
     expect(callIndexed((...args) => args)()).toEqual([0, undefined]);
   });
 });

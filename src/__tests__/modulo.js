@@ -1,4 +1,4 @@
-import modulo from '../modulo';
+import { modulo } from '../modulo';
 
 describe('Core.modulo', () => {
   test('Divide the a by b and return the remainder', () => {

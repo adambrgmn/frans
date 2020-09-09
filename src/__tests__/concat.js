@@ -1,4 +1,4 @@
-import concat from '../concat';
+import { concat } from '../concat';
 
 describe('Core.concat', () => {
   test('adds combines the elements of the two lists', () => {

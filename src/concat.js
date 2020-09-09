@@ -1,6 +1,6 @@
-import isString from './isString';
-import isArray from './isArray';
-import join from './join';
+import { isString } from './isString';
+import { isArray } from './isArray';
+import { join } from './join';
 
 const concat = (a, b) => {
   if (isArray(a) && isArray(b)) {
@@ -14,4 +14,4 @@ const concat = (a, b) => {
   throw new TypeError('Both arguments must be of same type');
 };
 
-export { concat as default };
+export { concat };

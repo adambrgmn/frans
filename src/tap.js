@@ -1,6 +1,6 @@
-const tap = fn => x => {
+const tap = (fn) => (x) => {
   fn(x);
   return x;
 };
 
-export { tap as default };
+export { tap };

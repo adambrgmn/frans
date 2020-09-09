@@ -1,4 +1,4 @@
-import keys, { _keys } from '../keys';
+import { keys, _keys } from '../keys';
 
 describe('Core.keys', () => {
   test('returns an array of an objects keys', () => {

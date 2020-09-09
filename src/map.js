@@ -1,9 +1,9 @@
-import reduce from './reduce';
-import isObject from './isObject';
-import assoc from './assoc';
-import prop from './prop';
-import keys from './keys';
-import length from './length';
+import { reduce } from './reduce';
+import { isObject } from './isObject';
+import { assoc } from './assoc';
+import { prop } from './prop';
+import { keys } from './keys';
+import { length } from './length';
 
 const mapObject = (fn, obj) =>
   reduce((acc, key) => assoc(key, fn(prop(key, obj)), acc), {}, keys(obj));
@@ -23,4 +23,4 @@ const map = (fn, arr) => {
   return result;
 };
 
-export { map as default };
+export { map };

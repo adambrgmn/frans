@@ -1,4 +1,4 @@
-import negate from '../negate';
+import { negate } from '../negate';
 
 describe('Core.negate', () => {
   test('negates the given number', () => {

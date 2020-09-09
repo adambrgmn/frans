@@ -1,3 +1,3 @@
-const isNil = x => x == null;
+const isNil = (x) => x == null;
 
-export { isNil as default };
+export { isNil };

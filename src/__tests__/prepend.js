@@ -1,4 +1,4 @@
-import prepend from '../prepend';
+import { prepend } from '../prepend';
 
 describe('Core.prepend', () => {
   test('adds the element to the beginning of the list', () => {

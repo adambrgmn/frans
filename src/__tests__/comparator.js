@@ -1,4 +1,4 @@
-import comparator from '../comparator';
+import { comparator } from '../comparator';
 
 describe('Core.comparator', () => {
   test('builds a comparator function for sorting out of a simple predicate that reports whether the first param is smaller', () => {

@@ -1,4 +1,4 @@
-import reverse, { _reverseString } from '../reverse';
+import { reverse, _reverseString } from '../reverse';
 
 describe('Core.reverse', () => {
   test('reverses arrays', () => {

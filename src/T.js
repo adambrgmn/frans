@@ -1,5 +1,5 @@
-import always from './always';
+import { always } from './always';
 
 const T = always(true);
 
-export { T as default };
+export { T };

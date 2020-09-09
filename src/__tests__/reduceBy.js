@@ -1,12 +1,18 @@
 /* eslint-disable no-nested-ternary */
-import reduceBy from '../reduceBy';
+import { reduceBy } from '../reduceBy';
 
 describe('Core.reduceBy', () => {
   test('splits the list into groups according to the grouping function', () => {
-    const grade = score =>
+    const grade = (score) =>
       score < 65
         ? 'F'
-        : score < 70 ? 'D' : score < 80 ? 'C' : score < 90 ? 'B' : 'A';
+        : score < 70
+        ? 'D'
+        : score < 80
+        ? 'C'
+        : score < 90
+        ? 'B'
+        : 'A';
 
     const students = [
       { name: 'Abby', score: 84 },
@@ -21,7 +27,7 @@ describe('Core.reduceBy', () => {
       { name: 'Jack', score: 69 },
     ];
 
-    const byGrade = student => grade(student.score || 0);
+    const byGrade = (student) => grade(student.score || 0);
     const collectNames = (acc, student) => acc.concat(student.name);
 
     expect(reduceBy(collectNames, [], byGrade, students)).toEqual({
@@ -34,7 +40,7 @@ describe('Core.reduceBy', () => {
   });
 
   test('returns an empty object if given an empty array', () => {
-    const byType = obj => obj.type;
+    const byType = (obj) => obj.type;
     const sumValues = (acc, obj) => acc + obj.val;
 
     expect(reduceBy(sumValues, 0, byType, [])).toEqual({});

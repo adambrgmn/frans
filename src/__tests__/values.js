@@ -1,5 +1,5 @@
 import { map } from '../';
-import values, { _values } from '../values';
+import { values, _values } from '../values';
 
 describe('Core.values', () => {
   beforeEach(() => {

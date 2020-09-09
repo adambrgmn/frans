@@ -1,4 +1,4 @@
-import isArray, { _isArray } from '../isArray';
+import { isArray, _isArray } from '../isArray';
 
 describe('Core.isArray', () => {
   test('checks if a value is an array', () => {

@@ -1,4 +1,4 @@
-import isObject from '../isObject';
+import { isObject } from '../isObject';
 
 describe('Core.isObject', () => {
   test('checks if a value is an object (excludes arrays)', () => {

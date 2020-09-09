@@ -1,5 +1,5 @@
-import subtract from './subtract';
+import { subtract } from './subtract';
 
-const dec = n => subtract(n, 1);
+const dec = (n) => subtract(n, 1);
 
-export { dec as default };
+export { dec };

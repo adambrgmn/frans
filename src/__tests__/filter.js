@@ -1,9 +1,9 @@
-import filter from '../filter';
+import { filter } from '../filter';
 
 describe('Core.filter', () => {
-  const even = x => x % 2 === 0;
-  const above100 = x => x > 100;
-  const positive = x => x > 0;
+  const even = (x) => x % 2 === 0;
+  const above100 = (x) => x > 100;
+  const positive = (x) => x > 0;
 
   test('reduces an array to those matching a filter', () => {
     expect(filter(even, [1, 2, 3, 4, 5])).toEqual([2, 4]);

@@ -1,4 +1,4 @@
-import path from '../path';
+import { path } from '../path';
 
 describe('Core.path', () => {
   const deepObject = {

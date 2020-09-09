@@ -1,12 +1,12 @@
-import assoc from './assoc';
-import has from './has';
-import head from './head';
-import isArray from './isArray';
-import isNil from './isNil';
-import isNumber from './isNumber';
-import length from './length';
-import prop from './prop';
-import slice from './slice';
+import { assoc } from './assoc';
+import { has } from './has';
+import { head } from './head';
+import { isArray } from './isArray';
+import { isNil } from './isNil';
+import { isNumber } from './isNumber';
+import { length } from './length';
+import { prop } from './prop';
+import { slice } from './slice';
 
 const assocPath = (path, value, obj) => {
   if (length(path) < 1) return value;
@@ -19,7 +19,9 @@ const assocPath = (path, value, obj) => {
     const nextObj =
       !isNil(obj) && has(idx, obj) // eslint-disable-line no-nested-ternary
         ? prop(idx, obj)
-        : isNumber(head(nextPath)) ? [] : {};
+        : isNumber(head(nextPath))
+        ? []
+        : {};
 
     val = assocPath(nextPath, val, nextObj);
   }
@@ -33,4 +35,4 @@ const assocPath = (path, value, obj) => {
   return assoc(idx, val, obj);
 };
 
-export { assocPath as default };
+export { assocPath };

@@ -1,4 +1,4 @@
-import product from '../product';
+import { product } from '../product';
 
 describe('Core.product', () => {
   test('get the product of a list of numbers', () => {

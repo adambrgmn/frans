@@ -1,9 +1,9 @@
-import both from '../both';
+import { both } from '../both';
 
 describe('Core.both', () => {
   test('combines two boolean-returning functions into one', () => {
-    const even = x => x % 2 === 0;
-    const gt10 = x => x > 10;
+    const even = (x) => x % 2 === 0;
+    const gt10 = (x) => x > 10;
     const f = both(even, gt10);
 
     expect(f(8)).toBeFalsy();

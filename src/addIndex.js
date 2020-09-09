@@ -1,6 +1,6 @@
-import last from './last';
+import { last } from './last';
 
-const addIndex = addTo => (origFn, ...args) => {
+const addIndex = (addTo) => (origFn, ...args) => {
   let idx = 0;
   const list = last(args);
   const newFn = (...args2) => {
@@ -12,4 +12,4 @@ const addIndex = addTo => (origFn, ...args) => {
   return addTo(newFn, ...args);
 };
 
-export { addIndex as default };
+export { addIndex };

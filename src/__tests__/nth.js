@@ -1,4 +1,4 @@
-import nth from '../nth';
+import { nth } from '../nth';
 
 describe('Core.nth', () => {
   const list = ['foo', 'bar', 'baz'];

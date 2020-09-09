@@ -1,4 +1,4 @@
-import F from '../F';
+import { F } from '../F';
 
 describe('Core.T', () => {
   test('always returns false', () => {

@@ -7,4 +7,4 @@ const dissoc = (key, obj) => {
   return newObj;
 };
 
-export { dissoc as default };
+export { dissoc };

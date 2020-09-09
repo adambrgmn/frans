@@ -1,7 +1,7 @@
-import throttle from '../throttle';
+import { throttle } from '../throttle';
 
 describe('Core.throttle', () => {
-  const delay = wait => new Promise(resolve => setTimeout(resolve, wait));
+  const delay = (wait) => new Promise((resolve) => setTimeout(resolve, wait));
 
   test('will throttle a function and only call it once within the given timeframe', () => {
     const fn = jest.fn();

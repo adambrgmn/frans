@@ -1,4 +1,4 @@
-import sort from '../sort';
+import { sort } from '../sort';
 
 describe('Core.sort', () => {
   const sortFn = (a, b) => a - b;

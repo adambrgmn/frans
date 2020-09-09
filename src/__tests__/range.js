@@ -1,4 +1,4 @@
-import range from '../range';
+import { range } from '../range';
 
 describe('Core.range', () => {
   test('returns list of numbers', () => {

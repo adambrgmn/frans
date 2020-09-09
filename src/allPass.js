@@ -13,4 +13,4 @@ const allPass = (predicateList, ...el) => {
   return ret;
 };
 
-export { allPass as default };
+export { allPass };

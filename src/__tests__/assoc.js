@@ -1,4 +1,4 @@
-import assoc from '../assoc';
+import { assoc } from '../assoc';
 
 describe('Core.assoc', () => {
   test('makes a shallow clone of an object, overriding only the specified property', () => {

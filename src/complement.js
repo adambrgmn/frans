@@ -1,3 +1,3 @@
-const complement = fn => (...x) => !fn(...x);
+const complement = (fn) => (...x) => !fn(...x);
 
-export { complement as default };
+export { complement };

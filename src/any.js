@@ -1,4 +1,4 @@
-import length from './length';
+import { length } from './length';
 
 const any = (fn, list) => {
   const l = length(list);
@@ -15,4 +15,4 @@ const any = (fn, list) => {
   return ret;
 };
 
-export { any as default };
+export { any };
