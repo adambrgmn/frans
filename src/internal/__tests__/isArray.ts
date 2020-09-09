@@ -9,5 +9,11 @@ describe('Internal.isArray', () => {
     expect(isArray('baz')).toBeFalsy();
     expect(isArray(null)).toBeFalsy();
     expect(isArray(undefined)).toBeFalsy();
+
+    function testArguments() {
+      return isArray(arguments);
+    }
+
+    expect(testArguments()).toBeFalsy();
   });
 });
