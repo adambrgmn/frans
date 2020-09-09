@@ -19,10 +19,12 @@ describe('Core.concat', () => {
   });
 
   test('throws if attempting to combine an array with a non-array', () => {
+    // @ts-expect-error
     expect(() => concat([1], 2)).toThrow(TypeError);
   });
 
   test('throws if not an array or String', () => {
+    // @ts-expect-error
     expect(() => concat({}, {})).toThrow(TypeError);
   });
 });
