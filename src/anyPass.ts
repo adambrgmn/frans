@@ -1,4 +1,4 @@
-type PredicateFn<T> = (...args: T[]) => boolean;
+import { PredicateFn } from './internal/types';
 
 export function anyPass<T>(predicateList: PredicateFn<T>[], ...args: T[]) {
   const { length } = predicateList;
