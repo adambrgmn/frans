@@ -1,5 +1,4 @@
 export * from './add';
-export * from './addIndex';
 export * from './adjust';
 export * from './all';
 export * from './allPass';
