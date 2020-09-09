@@ -7,7 +7,6 @@ export * from './any';
 export * from './anyPass';
 export * from './append';
 export * from './assoc';
-export * from './assocPath';
 export * from './both';
 export * from './clamp';
 export * from './comparator';
