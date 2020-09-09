@@ -1,9 +1,9 @@
-import reduce from './reduce';
-import append from './append';
-import isObject from './isObject';
-import prop from './prop';
-import assoc from './assoc';
-import keys from './keys';
+import { reduce } from './reduce';
+import { append } from './append';
+import { isObject } from './isObject';
+import { prop } from './prop';
+import { assoc } from './assoc';
+import { keys } from './keys';
 
 const filterArray = (fn, arr) =>
   reduce((a, e) => (fn(e) ? append(e, a) : a), [], arr);
@@ -23,4 +23,4 @@ const filter = (fn, arr) => {
   return filterArray(fn, arr);
 };
 
-export { filter as default };
+export { filter };

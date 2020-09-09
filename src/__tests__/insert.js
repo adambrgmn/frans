@@ -1,4 +1,4 @@
-import insert from '../insert';
+import { insert } from '../insert';
 
 describe('Core.insert', () => {
   test('inserts an element into the given list', () => {

@@ -1,4 +1,4 @@
-import append from '../append';
+import { append } from '../append';
 
 describe('Core.append', () => {
   test('adds the element to the end of the list', () => {

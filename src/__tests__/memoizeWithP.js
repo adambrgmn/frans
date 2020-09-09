@@ -1,4 +1,4 @@
-import memoizeWithP from '../memoizeWithP';
+import { memoizeWithP } from '../memoizeWithP';
 
 describe('Core.memoizeWithP', () => {
   const memoP = memoizeWithP((...args) => args.join(''));

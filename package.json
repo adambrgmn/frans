@@ -2,7 +2,7 @@
   "name": "frans",
   "version": "1.0.0",
   "description": "A minimal functional programming library",
-  "source": "src/index.js",
+  "source": "src/index.ts",
   "main": "dist/frans.js",
   "umd:main": "dist/frans.umd.js",
   "module": "dist/frans.module.js",
@@ -25,6 +25,7 @@
     "build": "microbundle",
     "test": "jest",
     "lint": "eslint src scripts",
+    "type-check": "tsc --noEmit",
     "validate": "yarn run lint && yarn run test --coverage && yarn run build",
     "release": "yarn build && yarn changeset publish",
     "create-module": "node scripts/create-module.js"

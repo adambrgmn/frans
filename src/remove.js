@@ -4,4 +4,4 @@ const remove = (start, end, list) => {
   return res;
 };
 
-export { remove as default };
+export { remove };

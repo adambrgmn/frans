@@ -1,6 +1,6 @@
-import length from './length';
+import { length } from './length';
 
-const curry = fn => {
+const curry = (fn) => {
   const totalArgs = length(fn);
 
   const curried = (...partialArgs) => (...args) => {
@@ -14,4 +14,4 @@ const curry = fn => {
   return curried();
 };
 
-export { curry as default };
+export { curry };

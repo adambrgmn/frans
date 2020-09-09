@@ -1,8 +1,8 @@
-import pipe from '../pipe';
+import { pipe } from '../pipe';
 
 describe('Core.pipe', () => {
-  const capitalize = x => `${x[0].toUpperCase()}${x.substring(1)}`;
-  const reverse = x => {
+  const capitalize = (x) => `${x[0].toUpperCase()}${x.substring(1)}`;
+  const reverse = (x) => {
     let ret = '';
     for (let i = x.length - 1; i > -1; i -= 1) ret += x[i];
 

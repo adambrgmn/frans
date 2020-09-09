@@ -1,4 +1,4 @@
-import isNumber from './isNumber';
+import { isNumber } from './isNumber';
 
 const range = (from, to) => {
   if (!isNumber(from) && !isNumber(to)) {
@@ -19,4 +19,4 @@ const range = (from, to) => {
   return arr;
 };
 
-export { range as default };
+export { range };

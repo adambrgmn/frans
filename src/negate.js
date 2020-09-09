@@ -1,3 +1,3 @@
-const negate = n => -n;
+const negate = (n) => -n;
 
-export { negate as default };
+export { negate };

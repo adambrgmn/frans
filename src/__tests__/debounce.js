@@ -1,7 +1,7 @@
-import debounce from '../debounce';
+import { debounce } from '../debounce';
 
 describe('Core.debounce', () => {
-  const delay = wait => new Promise(resolve => setTimeout(resolve, wait));
+  const delay = (wait) => new Promise((resolve) => setTimeout(resolve, wait));
 
   test('will debounce a function', async () => {
     const fn = jest.fn();

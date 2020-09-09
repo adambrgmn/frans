@@ -1,4 +1,4 @@
-import length from './length';
+import { length } from './length';
 
 const reduce = (fn, init, arr) => {
   let idx = 0;
@@ -13,4 +13,4 @@ const reduce = (fn, init, arr) => {
   return accumulator;
 };
 
-export { reduce as default };
+export { reduce };

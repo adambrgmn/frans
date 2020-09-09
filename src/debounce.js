@@ -1,4 +1,4 @@
-import isNil from './isNil';
+import { isNil } from './isNil';
 
 const debounce = (fn, wait) => {
   const undef = '@@undefined';
@@ -41,4 +41,4 @@ const debounce = (fn, wait) => {
   return debounced;
 };
 
-export { debounce as default };
+export { debounce };

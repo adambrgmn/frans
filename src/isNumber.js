@@ -1,5 +1,5 @@
-import is from './is';
+import { is } from './is';
 
-const isNumber = x => is('Number', x);
+const isNumber = (x) => is('Number', x);
 
-export { isNumber as default };
+export { isNumber };

@@ -1,6 +1,6 @@
-import length from './length';
+import { length } from './length';
 
-const any = (fn, list) => {
+export function any<T>(fn: (item: T) => boolean, list: T[]): boolean {
   const l = length(list);
   let i = 0;
   let ret = false;
@@ -13,6 +13,4 @@ const any = (fn, list) => {
   }
 
   return ret;
-};
-
-export { any as default };
+}

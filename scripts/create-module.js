@@ -5,6 +5,7 @@ const util = require('util');
 const prettier = require('prettier');
 const chalk = require('chalk');
 const cp = require('child_process');
+const pkg = require('../package.json');
 
 const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
@@ -12,21 +13,29 @@ const access = util.promisify(fs.access);
 const exec = util.promisify(cp.exec);
 
 const paths = {
-  index: () => path.join(process.cwd(), 'src', 'index.js'),
-  mod: name => path.join(process.cwd(), 'src', `${name}.js`),
-  test: name => path.join(process.cwd(), 'src', '__tests__', `${name}.js`),
+  index: () => path.join(process.cwd(), 'src', 'index.ts'),
+  mod: (name) => path.join(process.cwd(), 'src', `${name}.ts`),
+  test: (name) => path.join(process.cwd(), 'src', '__tests__', `${name}.ts`),
 };
 
 const templates = {
-  mod: name => `const ${name} = () => null;\n\nexport {${name} as default};`,
-  test: name =>
-    `import ${name} from '../${name}';\n\ndescribe('Core.${name}', () => { test('module will...', () => { expect(${name}()).not.toBe(null); }); });`,
+  mod: (name) => `export const ${name} = () => null;\n`,
+  test: (name) => {
+    return (
+      [
+        `import { ${name} } from '../${name}';`,
+        '',
+        `describe('Core.${name}', () => { test('module will...', () => { expect(${name}()).not.toBe(null); }); });`,
+      ].join('\n') + '\n'
+    );
+  },
 };
 
-const format = code =>
-  prettier.format(code, { singleQuote: true, trailingComma: 'es5' });
+const format = (code) => {
+  return prettier.format(code, { ...pkg.prettier, parser: 'babel' });
+};
 
-const checkAccess = async name => {
+const checkAccess = async (name) => {
   try {
     await access(paths.mod(name), fs.constants.F_OK);
     return true;
@@ -38,10 +47,10 @@ const checkAccess = async name => {
 const regenerateIndex = async (...names) => {
   const content = await readFile(paths.index(), 'utf8');
 
-  const importRegExp = () => /import (\w+) from '\.\/(\w+)';/g;
+  const importRegExp = () => /export \* from '\.\/(\w+)';/g;
 
   const existingImports = content.match(importRegExp());
-  const existingModules = existingImports.map(s => importRegExp().exec(s)[1]);
+  const existingModules = existingImports.map((s) => importRegExp().exec(s)[1]);
 
   const allModules = [...existingModules, ...names].sort((a, b) => {
     const lowerA = a.toLowerCase();
@@ -50,36 +59,37 @@ const regenerateIndex = async (...names) => {
     if (lowerA < lowerB) return -1;
     return 0;
   });
+  console.log(allModules);
 
   const newImport = allModules.reduce(
-    (acc, mod) => `${acc} import ${mod} from './${mod}';`,
+    (acc, mod) => `${acc} export * from './${mod}';`,
     '',
   );
-  const newExport = `export { ${allModules.join(', ')} }`;
 
-  const newContent = format(`${newImport}\n\n${newExport}`);
+  const newContent = format(`${newImport}`);
   await writeFile(paths.index(), newContent, 'utf8');
 };
 
-const createModule = async name => {
+const createModule = async (name) => {
   const fileContent = format(templates.mod(name));
   await writeFile(paths.mod(name), fileContent, 'utf8');
 };
 
-const createTest = async name => {
+const createTest = async (name) => {
   const fileContent = format(templates.test(name));
   await writeFile(paths.test(name), fileContent, 'utf8');
 };
 
-const createModuleFiles = name =>
-  Promise.all([createModule(name), createTest(name)]);
+const createModuleFiles = (name) => {
+  return Promise.all([createModule(name), createTest(name)]);
+};
 
 async function main() {
   try {
     const [, , ...newModules] = process.argv;
 
     const isCreated = await Promise.all(
-      newModules.map(async name => {
+      newModules.map(async (name) => {
         const exists = await checkAccess(name);
         return [name, exists];
       }),
@@ -99,7 +109,7 @@ async function main() {
     }, []);
 
     await Promise.all(
-      modulesToCreate.map(async name => {
+      modulesToCreate.map(async (name) => {
         await createModuleFiles(name);
         console.log(
           `${chalk.green('→')} Created files for ${chalk.blue(name)}`,

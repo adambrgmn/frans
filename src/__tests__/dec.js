@@ -1,4 +1,4 @@
-import dec from '../dec';
+import { dec } from '../dec';
 
 describe('Core.dec', () => {
   test('decrease a number by one', () => {

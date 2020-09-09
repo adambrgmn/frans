@@ -1,6 +1,6 @@
-import add from './add';
-import reduce from './reduce';
+import { add } from './add';
+import { reduce } from './reduce';
 
-const sum = list => reduce(add, 0, list);
+const sum = (list) => reduce(add, 0, list);
 
-export { sum as default };
+export { sum };

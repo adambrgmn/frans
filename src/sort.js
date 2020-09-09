@@ -3,4 +3,4 @@ const sort = (fn, list) => {
   return arr.sort(fn);
 };
 
-export { sort as default };
+export { sort };

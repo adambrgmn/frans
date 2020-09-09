@@ -1,4 +1,4 @@
-import dissoc from '../dissoc';
+import { dissoc } from '../dissoc';
 
 describe('Core.dissoc', () => {
   test('copies an object omitting the specified property', () => {

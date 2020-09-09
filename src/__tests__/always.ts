@@ -1,4 +1,4 @@
-import always from '../always';
+import { always } from '../always';
 
 describe('Core.always', () => {
   test('returns a function that returns the object initially supplied', () => {

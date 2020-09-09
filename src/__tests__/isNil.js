@@ -1,4 +1,4 @@
-import isNil from '../isNil';
+import { isNil } from '../isNil';
 
 describe('Core.isNil', () => {
   test('checks if a value is a null or undefined', () => {

@@ -1,6 +1,6 @@
-import reduce from './reduce';
-import has from './has';
-import assoc from './assoc';
+import { reduce } from './reduce';
+import { has } from './has';
+import { assoc } from './assoc';
 
 const reduceBy = (valFn, valAcc, keyFn, list) =>
   reduce(
@@ -13,4 +13,4 @@ const reduceBy = (valFn, valAcc, keyFn, list) =>
     list,
   );
 
-export { reduceBy as default };
+export { reduceBy };

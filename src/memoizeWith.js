@@ -1,7 +1,7 @@
 /* eslint-disable no-underscore-dangle */
-import _createCache from './internal/createCache';
+import { createCache as _createCache } from './internal/createCache';
 
-const memoizeWith = (keyFn, createCache = _createCache) => fn => {
+const memoizeWith = (keyFn, createCache = _createCache) => (fn) => {
   const { has, set, get } = createCache();
 
   return (...args) => {
@@ -17,4 +17,4 @@ const memoizeWith = (keyFn, createCache = _createCache) => fn => {
   };
 };
 
-export { memoizeWith as default };
+export { memoizeWith };

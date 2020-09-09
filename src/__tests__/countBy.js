@@ -1,4 +1,4 @@
-import countBy from '../countBy';
+import { countBy } from '../countBy';
 
 describe('Core.countBy', () => {
   const albums = [
@@ -28,8 +28,8 @@ describe('Core.countBy', () => {
     },
   ];
 
-  const prop = p => obj => obj[p];
-  const derivedGenre = album => {
+  const prop = (p) => (obj) => obj[p];
+  const derivedGenre = (album) => {
     const remap = {
       Baroque: 'Classical',
       Modern: 'Classical',
@@ -67,10 +67,10 @@ describe('Core.countBy', () => {
 
   test('will force items into strings due to the nature of js objects', () => {
     const list = [() => {}, 1, {}, []];
-    const id = x => x;
+    const id = (x) => x;
     expect(countBy(id, list)).toEqual({
       '() => {}': 1,
-      '1': 1,
+      1: 1,
       '[object Object]': 1,
       '': 1,
     });

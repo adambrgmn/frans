@@ -1,4 +1,4 @@
-import is from '../is';
+import { is } from '../is';
 
 describe('Core.is', () => {
   test('matches a values type with typeof', () => {

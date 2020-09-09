@@ -1,6 +1,6 @@
-import length from './length';
+import { length } from './length';
 
-const all = (fn, list) => {
+export function all<T>(fn: (item: T) => boolean, list: ArrayLike<T>): boolean {
   const l = length(list);
   let i = 0;
   let ret = true;
@@ -13,6 +13,4 @@ const all = (fn, list) => {
   }
 
   return ret;
-};
-
-export { all as default };
+}

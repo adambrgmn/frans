@@ -13,4 +13,4 @@ const throttle = (fn, wait) => {
   };
 };
 
-export { throttle as default };
+export { throttle };

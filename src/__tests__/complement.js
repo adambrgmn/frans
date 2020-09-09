@@ -1,15 +1,15 @@
-import complement from '../complement';
+import { complement } from '../complement';
 
 describe('Core.complement', () => {
   test('accepts a boolean returning function and reverses its otput', () => {
-    const isNil = x => x == null;
+    const isNil = (x) => x == null;
     const isNotNil = complement(isNil);
 
     expect(isNotNil(null)).not.toBe(isNil(null));
   });
 
   test('creates boolean-returning function that reverses another', () => {
-    const even = x => x % 2 === 0;
+    const even = (x) => x % 2 === 0;
     const f = complement(even);
 
     expect(f(8)).toBeFalsy();

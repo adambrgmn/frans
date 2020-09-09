@@ -9,4 +9,4 @@ const clamp = (min, max, n) => {
   return n;
 };
 
-export { clamp as default };
+export { clamp };

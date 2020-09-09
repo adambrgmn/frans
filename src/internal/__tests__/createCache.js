@@ -1,4 +1,4 @@
-import createCache from '../createCache';
+import { createCache } from '../createCache';
 
 describe('Internal.createCache', () => {
   const cache = createCache();

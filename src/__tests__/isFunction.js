@@ -1,4 +1,4 @@
-import isFunction from '../isFunction';
+import { isFunction } from '../isFunction';
 
 describe('Core.isFunction', () => {
   test('checks if a value is a function using typeof', () => {

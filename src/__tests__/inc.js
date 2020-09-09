@@ -1,4 +1,4 @@
-import inc from '../inc';
+import { inc } from '../inc';
 
 describe('Core.inc', () => {
   test('increase a number by one', () => {

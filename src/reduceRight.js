@@ -1,4 +1,4 @@
-import length from './length';
+import { length } from './length';
 
 const reduceRight = (fn, init, arr) => {
   let accumulator = init;
@@ -13,4 +13,4 @@ const reduceRight = (fn, init, arr) => {
   return accumulator;
 };
 
-export { reduceRight as default };
+export { reduceRight };

@@ -1,4 +1,4 @@
-import last from '../last';
+import { last } from '../last';
 
 describe('Core.last', () => {
   test('returns the first element of an array', () => {

@@ -1,4 +1,4 @@
-import isArray, { _isArray } from '../isArray';
+import { isArray } from '../isArray';
 
 describe('Core.isArray', () => {
   test('checks if a value is an array', () => {
@@ -9,17 +9,11 @@ describe('Core.isArray', () => {
     expect(isArray('baz')).toBeFalsy();
     expect(isArray(null)).toBeFalsy();
     expect(isArray(undefined)).toBeFalsy();
-  });
-});
 
-describe('Internal._isArray', () => {
-  test('checks if a value is an array', () => {
-    expect(_isArray([])).toBeTruthy();
-    expect(_isArray([1, 2, 3])).toBeTruthy();
-    expect(_isArray({ foo: 'bar' })).toBeFalsy();
-    expect(_isArray(() => [1, 2, 3])).toBeFalsy();
-    expect(_isArray('baz')).toBeFalsy();
-    expect(_isArray(null)).toBeFalsy();
-    expect(_isArray(undefined)).toBeFalsy();
+    function testArguments() {
+      return isArray(arguments);
+    }
+
+    expect(testArguments()).toBeFalsy();
   });
 });

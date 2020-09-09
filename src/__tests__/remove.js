@@ -1,4 +1,4 @@
-import remove from '../remove';
+import { remove } from '../remove';
 
 describe('Core.remove', () => {
   test('splices out a sub-list of the given list', () => {

@@ -1,4 +1,4 @@
-import join from '../join';
+import { join } from '../join';
 
 describe('Core.join', () => {
   test('concatenates an arrays elements into a string', () => {

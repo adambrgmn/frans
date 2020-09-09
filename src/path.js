@@ -1,5 +1,5 @@
-import reduce from './reduce';
-import isNil from './isNil';
+import { reduce } from './reduce';
+import { isNil } from './isNil';
 
 const path = (p, obj) =>
   reduce(
@@ -11,4 +11,4 @@ const path = (p, obj) =>
     p,
   );
 
-export { path as default };
+export { path };
