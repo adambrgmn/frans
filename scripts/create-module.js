@@ -47,7 +47,7 @@ const checkAccess = async (name) => {
 const regenerateIndex = async (...names) => {
   const content = await readFile(paths.index(), 'utf8');
 
-  const importRegExp = () => /import (\w+) from '\.\/(\w+)';/g;
+  const importRegExp = () => /export \* from '\.\/(\w+)';/g;
 
   const existingImports = content.match(importRegExp());
   const existingModules = existingImports.map((s) => importRegExp().exec(s)[1]);
@@ -59,6 +59,7 @@ const regenerateIndex = async (...names) => {
     if (lowerA < lowerB) return -1;
     return 0;
   });
+  console.log(allModules);
 
   const newImport = allModules.reduce(
     (acc, mod) => `${acc} export * from './${mod}';`,
