@@ -1,4 +1,4 @@
-import { reverse, _reverseString } from '../reverse';
+import { reverse } from '../reverse';
 
 describe('Core.reverse', () => {
   test('reverses arrays', () => {
@@ -7,11 +7,5 @@ describe('Core.reverse', () => {
 
   test('reverses strings', () => {
     expect(reverse('123')).toBe('321');
-  });
-});
-
-describe('Internal._reverseString', () => {
-  test('reverses strings', () => {
-    expect(_reverseString('123')).toBe('321');
   });
 });

@@ -1,12 +1,13 @@
 import { keys } from '../keys';
 
-describe('Core.keys', () => {
+describe('Internal.keys', () => {
   test('returns an array of an objects keys', () => {
     expect(keys({ a: 1, b: 2 })).toEqual(['a', 'b']);
   });
 
   test('does not include the given objects prototype props', () => {
     function Person() {
+      // @ts-ignore
       this.age = 0;
     }
 
@@ -14,14 +15,8 @@ describe('Core.keys', () => {
       this.age += 1;
     };
 
+    // @ts-ignore
     const bob = new Person();
     expect(keys(bob)).toEqual(['age']);
-  });
-
-  test('returns an empty array for nil or non object', () => {
-    expect(keys(null)).toEqual([]);
-    expect(keys([])).toEqual([]);
-    expect(keys('foo')).toEqual([]);
-    expect(keys(123)).toEqual([]);
   });
 });

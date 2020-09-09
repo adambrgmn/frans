@@ -1,7 +1,4 @@
-/* eslint-disable no-underscore-dangle */
-import { is } from './is';
+import { isArray as _isArray } from './internal/isArray';
 
-const _isArray = (arg) => is('Array', arg);
 const isArray = Array.isArray || _isArray;
-
-export { isArray, _isArray };
+export { isArray };

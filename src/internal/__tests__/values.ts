@@ -1,21 +1,17 @@
-import { map } from '../';
+import { map } from '../../';
 import { values } from '../values';
 
-describe('Core.values', () => {
-  beforeEach(() => {
-    jest.resetModules();
-  });
+describe('Internal.values', () => {
+  const obj = {
+    a: 100,
+    b: [1, 2, 3],
+    c: { x: 200, y: 300 },
+    d: 'D',
+    e: null,
+    f: undefined,
+  };
 
   test("returns an array of the given object's values", () => {
-    const obj = {
-      a: 100,
-      b: [1, 2, 3],
-      c: { x: 200, y: 300 },
-      d: 'D',
-      e: null,
-      f: undefined,
-    };
-
     const vs = values(obj).sort();
     const ts = [[1, 2, 3], 100, 'D', { x: 200, y: 300 }, null, undefined];
 
@@ -32,7 +28,9 @@ describe('Core.values', () => {
 
   test("does not include the given object's prototype properties", () => {
     class Person {
-      constructor(name) {
+      name: string;
+      age: number;
+      constructor(name: string) {
         this.age = 0;
         this.name = name;
       }
@@ -43,7 +41,7 @@ describe('Core.values', () => {
     }
 
     const bob = new Person('bob');
-    expect(values(bob)).toEqual([0, 'bob']);
+    expect(values((bob as unknown) as any)).toEqual([0, 'bob']);
   });
 
   test('returns an empty object for primitives', () => {
@@ -62,13 +60,5 @@ describe('Core.values', () => {
     ]);
 
     expect(result).toEqual([[], [], [], [], [], [], [], [], [], []]);
-  });
-
-  test('falls back to internal _values if Object.values is undefined', () => {
-    const nativeValues = Object.values;
-    delete Object.values;
-
-    expect(values({ foo: 'bar', bar: 'foo' })).toEqual(['bar', 'foo']);
-    Object.values = nativeValues;
   });
 });
