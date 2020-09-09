@@ -18,7 +18,7 @@ export function adjust<T, R>(
   const arr = slice(0, Infinity, list);
 
   const idx = i < 0 ? arrLength + i : i;
-  const newArr = concat([], arr) as (T | R)[];
+  const newArr = concat([], arr as (T | R)[]);
   newArr[idx] = fn(arr[idx]);
 
   return newArr;
