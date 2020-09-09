@@ -13,7 +13,7 @@ describe('Core.assoc', () => {
 
   test('is the equivalent of clone and set if the property is not on the original', () => {
     const obj1 = { a: 1, b: { c: 2, d: 3 }, e: 4, f: 5 };
-    const obj2 = assoc('z', { x: 42 }, obj1);
+    const obj2 = assoc('z', { x: 42 }, (obj1 as unknown) as any);
     expect(obj2).toEqual({ a: 1, b: { c: 2, d: 3 }, e: 4, f: 5, z: { x: 42 } });
 
     expect(obj2.a).toBe(obj1.a);
