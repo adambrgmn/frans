@@ -1,6 +1,6 @@
 import { length } from './length';
 
-function all<T>(fn: (item: T) => boolean, list: ArrayLike<T>): boolean {
+export function all<T>(fn: (item: T) => boolean, list: ArrayLike<T>): boolean {
   const l = length(list);
   let i = 0;
   let ret = true;
@@ -14,5 +14,3 @@ function all<T>(fn: (item: T) => boolean, list: ArrayLike<T>): boolean {
 
   return ret;
 }
-
-export { all };

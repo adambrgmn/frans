@@ -3,7 +3,7 @@ import { concat } from './concat';
 import { length } from './length';
 import { isArray } from './isArray';
 
-function adjust<T, R>(
+export function adjust<T, R>(
   i: number,
   fn: (input: T) => R,
   list: T[] | ArrayLike<T>,
@@ -23,5 +23,3 @@ function adjust<T, R>(
 
   return newArr;
 }
-
-export { adjust };
