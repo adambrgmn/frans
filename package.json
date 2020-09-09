@@ -1,38 +1,83 @@
 {
   "name": "frans",
-  "version": "0.0.0-semantically-released",
+  "version": "1.0.0",
   "description": "A minimal functional programming library",
-  "main": "dist/frans.cjs.js",
-  "jsnext:main": "dist/frans.esm.js",
-  "module": "dist/frans.esm.js",
-  "files": ["dist"],
+  "source": "src/index.js",
+  "main": "dist/frans.js",
+  "umd:main": "dist/frans.umd.js",
+  "module": "dist/frans.module.js",
+  "esmodule": "dist/frans.esm.js",
+  "types": "dist/frans.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/adambrgmn/frans.git"
+    "url": "git+https://github.com/adambrgmn/frans.git"
   },
-  "author": "Adam Bergman <adam@fransvilhelm.com>",
+  "author": {
+    "name": "Adam Bergman",
+    "email": "adam@fransvilhelm.com"
+  },
+  "homepage": "https://github.com/adambrgmn/frans#readme",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "frans-scripts bundle",
-    "test": "frans-scripts test",
-    "lint": "frans-scripts lint",
-    "format": "frans-scripts format",
-    "precommit": "frans-scripts precommit",
+    "build": "microbundle",
+    "test": "jest",
+    "lint": "eslint src scripts",
     "validate": "yarn run lint && yarn run test --coverage && yarn run build",
-    "release": "frans-scripts release",
-    "create-module": "node scripts/create-module.js",
-    "bench": "frans-scripts build --quiet && node scripts/benchmark.js"
-  },
-  "devDependencies": {
-    "benchmark": "^2.1.4",
-    "cz-conventional-changelog": "^2.1.0",
-    "frans-scripts": "^2.1.3",
-    "ora": "^2.0.0"
+    "release": "yarn build && yarn changeset publish",
+    "create-module": "node scripts/create-module.js"
   },
   "dependencies": {},
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "@changesets/changelog-github": "^0.2.7",
+    "@changesets/cli": "^2.10.2",
+    "@types/jest": "^26.0.13",
+    "@types/node": "^14.6.4",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "babel-eslint": "^10.1.0",
+    "benchmark": "^2.1.4",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-flowtype": "^4.7.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "husky": "^4.3.0",
+    "jest": "^26.4.2",
+    "lint-staged": "^10.3.0",
+    "microbundle": "^0.12.3",
+    "ora": "^5.1.0",
+    "prettier": "^2.1.1",
+    "typescript": "^4.0.2"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ],
+    "*.{js,ts,jsx,tsx,json,md,yml,html}": [
+      "prettier --write"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "proseWrap": "always"
   }
 }
