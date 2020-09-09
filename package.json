@@ -28,7 +28,8 @@
     "type-check": "tsc --noEmit",
     "validate": "yarn run lint && yarn run test --coverage && yarn run build",
     "release": "yarn build && yarn changeset publish",
-    "create-module": "node scripts/create-module.js"
+    "create-module": "node scripts/create-module.js",
+    "mv:ts": "sh -c 'git mv src/${0}.js src/${0}.ts && git mv src/__tests__/${0}.js src/__tests__/${0}.ts'"
   },
   "dependencies": {},
   "devDependencies": {
