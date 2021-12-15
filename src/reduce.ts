@@ -1,6 +1,10 @@
 import { length } from './length';
 
-const reduce = (fn, init, arr) => {
+export function reduce<I, T = I[]>(
+  fn: (acc: T, item: I) => T,
+  init: T,
+  arr: I[],
+): T {
   let idx = 0;
   let accumulator = init;
   const len = length(arr);
@@ -11,6 +15,4 @@ const reduce = (fn, init, arr) => {
   }
 
   return accumulator;
-};
-
-export { reduce };
+}

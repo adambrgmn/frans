@@ -11,12 +11,4 @@ describe('Core.mean', () => {
   test('returns NaN for empty list', () => {
     expect(mean([])).toBe(NaN);
   });
-
-  test('handles array-like object', () => {
-    function getArgs() {
-      return arguments; // eslint-disable-line prefer-rest-params
-    }
-
-    expect(mean(getArgs(1, 2, 3))).toBe(2);
-  });
 });

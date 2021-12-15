@@ -6,7 +6,7 @@ import { isArray } from './isArray';
 export function adjust<T, R>(
   i: number,
   fn: (input: T) => R,
-  list: T[] | ArrayLike<T>,
+  list: ArrayLike<T>,
 ): (T | R)[] {
   const arrLength = length(list);
   if (i >= arrLength || i < -arrLength) {

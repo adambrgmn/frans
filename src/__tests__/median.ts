@@ -16,12 +16,4 @@ describe('Core.median', () => {
   test('returns NaN for an empty list', () => {
     expect(median([])).toBe(NaN);
   });
-
-  test('handles array-like object', () => {
-    function getArgs() {
-      return arguments; // eslint-disable-line prefer-rest-params
-    }
-
-    expect(median(getArgs(1, 2, 3))).toBe(2);
-  });
 });

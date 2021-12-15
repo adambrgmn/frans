@@ -7,7 +7,7 @@ import { nth } from './nth';
 import { slice } from './slice';
 import { mean } from './mean';
 
-const median = (list) => {
+export function median(list: number[]): number {
   const sorted = sort(subtract, list);
   const l = length(sorted);
   const half = divide(l, 2);
@@ -16,6 +16,4 @@ const median = (list) => {
 
   const sub = slice(half - 1, half + 1, sorted);
   return mean(sub);
-};
-
-export { median };
+}
