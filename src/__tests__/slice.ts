@@ -7,7 +7,7 @@ describe('Core.slice', () => {
   });
 
   test('handles array-like object', () => {
-    const args = (function getArgs() {
+    const args = (function getArgs(..._: any[]) {
       return arguments; // eslint-disable-line prefer-rest-params
     })(1, 2, 3, 4, 5);
 
